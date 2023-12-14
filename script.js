@@ -4,9 +4,12 @@ function openCard() {
   
     // Add a random background image from the "assets" folder
     const randomImages = [
-      'image1.jpg',
-      'image2.jpg',
-      'image3.jpg',
+      'assets/images/santa-brown.jpg',
+      'assets/images/santa-gifts.jpg',
+      'assets/images/santa-magic.jpg',
+      'assets/images/santa-pipe.jpg',
+      'assets/images/stampa.jpg',
+      'assets/images/two-santas.jpg'
     ];
     const randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
   
