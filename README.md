@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# team9-hackathon-december
+
+=======
 # 
 
 # Description
@@ -14,3 +18,4 @@
     - Karolis
     - Sam
     - Taher
+>>>>>>> main
