@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-# team9-hackathon-december
-
-=======
-# 
-
 # Description
-
-
 
 
 # Credits
@@ -18,4 +10,3 @@
     - Karolis
     - Sam
     - Taher
->>>>>>> main
