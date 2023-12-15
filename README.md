@@ -9,7 +9,7 @@
 
 ### The North Pole Nodes
     
-   ![Team Logo](/assets/images/team-nodes.jpg)
+![Team Logo](assets/images/images-README.md/team-nodes.jpg)
 
 
 &#x2744; Amirhossein
