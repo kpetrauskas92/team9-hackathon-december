@@ -1,28 +1,68 @@
 # The Merry Hackmas Card Creator
 
-![santa with gifts](assets/images/images-santa/santa-gifts.jpg)
+![nodes4lifeyo](assets/images/images-README.md/nodemas.png)
+
 
 ## Description
 
-The Merry Hackmas Card Creator is a project that allows users to generate personalized Christmas cards with customizable features, including the recipients name and choosing a variety of images and audio.
+<p align="center">
+  The Merry Hackmas Card Creator is a project that allows users to generate personalized Christmas cards with customizable features, including the recipients name and choosing a variety of images and audio.
+</P>
+
+<p align="center">
+  <img src="assets/images/images-santa/santa-gifts.jpg" alt="Santa with Gifts">
+</p>
+
+
+<p align="center">
+  <strong><a href="https://teman67.github.io/team9-hackathon-december">Click Here</a></strong> to see the deployed website.
+</p>
+
 
 ## Table of Contents
 
-- [Features](#features)
-- [Getting Started](#getting-started)
+- **[Features](#features)**
+- **[Agile Development and User Stories](#agile-development-and-user-stories)**
+- **[UX and UI Design](#uxui-design)**
+  - [UX](#ux)
+  - [UI](#ui)
+- **[Getting Started](#getting-started)**
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
+- **[Usage](#usage)**
   - [Customization](#customization)
-- [Technologies Used](#technologies-used)
-- [Credits](#credits)
-- [License](#license)
+- **[Deployment](#deployment)**
+- **[Testing](#testing)**
+- **[Technologies Used](#technologies-used)**
+- **[Credits](#credits)**
+- **[License](#license)**
 
-## Features
+## [Features](#features)
 
 - **Name Customization:** Users can personalize their Christmas card by adding the recipient's name.
 - **Image Selection:** Choose from a variety of festive images to accompany the card.
 - **Audio Options:** Add holiday tunes or personalized messages with audio customization.
+
+### [Agile Development and User Stories](#agile-development-and-user-stories)
+
+- [GitHubProjects](https://github.com/users/kpetrauskas92/projects/8)
+
+  - ![Image1]()
+
+
+### [UX and UI Design](#uxui-design)
+
+  - [UX](#ux)
+
+    - Wireframes
+
+      - ![wireframe-draft1](assets/images/images-README.md/wireframe-draft1.png)
+      - ![wireframe-draft2](assets/images/images-README.md/wireframe-draft2.png)
+
+
+  - [UI](#ui)
+    - ![Image1]()
+
 
 ## Getting Started
 
