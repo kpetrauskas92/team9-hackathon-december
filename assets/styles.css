@@ -23,12 +23,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: #ffffff;
-    transition: transform 0.5s ease-in-out;
+    color: red;
+    /* transition: transform 0.5s ease-in-out; */
   }
   
   .card-cover.random-bg {
-    background-image: url("assets/random-background.jpg"); /* Default background */
+    /* background-image: url(""); */
     background-size: cover;
     background-position: center;
   }
@@ -50,3 +50,10 @@ body {
     transform: translateY(100%);
   }
   
+  #cardCover {
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

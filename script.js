@@ -1,27 +1,26 @@
-function openCard() {
-
-}
-
-
-
 function randomSanta() {
   const card = document.getElementById('card');
-  const cardCover = document.getElementById('cardCover');
+  const santaImage = document.getElementById('cardCover');
 
-  // Add a random background image from the "assets" folder
-  const randomSantaImages = [
-    'assets/images/images-santa/santa-brown.jpg',
-    'assets/images/images/santa-gifts.jpg',
-    'assets/images/images/santa-magic.jpg',
-    'assets/images/images/santa-pipe.jpg',
-    'assets/images/images/stampa.jpg',
-    'assets/images/images/two-santas.jpg'
-  ];
-  const randomSantaImage = randomSantaImages[Math.floor(Math.random() * randomSantaImages.length)];
+  // Check if santaImage exists
+  if (santaImage) {
+    // Add a random background image from the "assets/images/images-santa" folder
+    const randomSantaImages = [
+      'images-santa/santa-brown.jpg',
+      'images-santa/santa-gifts.jpg',
+      'images-santa/santa-magic.jpg',
+      'images-santa/santa-pipe.jpg',
+      'images-santa/stampa.jpg',
+      'images-santa/two-santas.jpg'
+    ];
 
-  cardCover.style.backgroundImage = `url("${randomSantaImage}")`;
+    const randomSantaImage = randomSantaImages[Math.floor(Math.random() * randomSantaImages.length)];
 
-  card.classList.toggle('open');
+    santaImage.style.backgroundImage = `url("/assets/images/images-santa/${randomSantaImage}")`;
+
+    card.classList.toggle('open');
+  }
 }
+
 
   
