@@ -1,5 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0199d382d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles.css"> <!-- Link to the external CSS file -->
+    <title>The North Pole Nodes</title>
+</head>
+
+<body>
+
+    <!-- Logo Section -->
+    <div class="container">
+        <img src="" alt="Logo" class="logo">
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container main-container">
+
+        <!-- Left Section -->
+        <div class="left-section">
+            <!-- Choose Image Section -->
+            <div class="choose-image">
+                <label for="imageSelect">Choose Image:</label>
+                <select id="imageSelect" class="form-control" onchange="showSelectedImage()">
+                    <option value="image1">Christmas Card</option>
+                    <option value="image2">Christmas tree</option>
+                    <option value="image3">Christmas tree red</option>
+                    <option value="image4">Apple</option>
+                </select>
+                <img src="assets/images/options/christmas-card-1843552_1280.jpg" alt="Selected Image" class="img-fluid mt-2"
+                    id="image1">
+                <img src="assets/images/options/christmas-tree-2928142_1280.jpg" alt="Selected Image" class="img-fluid mt-2"
+                    id="image2" style="display: none;">
+                <img src="assets/images/options/red-2892235_1280.jpg" alt="Selected Image" class="img-fluid mt-2" id="image3"
+                    style="display: none;">
+                <img src="assets/images/options/wood-1776060_1280.jpg" alt="Selected Image" class="img-fluid mt-2" id="image4"
+                    style="display: none;">
+            </div>
+
+            <!-- Sender and Receiver Names Section -->
+            <div class="form-row mt-3">
+                <div class="form-group col-md-6">
+                    <label for="senderName">Sender Name:</label>
+                    <input type="text" class="form-control" id="senderName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="receiverName">Receiver Name:</label>
+                    <input type="text" class="form-control" id="receiverName">
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+
+            <!-- Choose Sound Section -->
+            <div class="choose-sound">
+                <label for="soundSelect">Choose Sound:</label>
+                <select id="soundSelect" class="form-control">
+                    <!-- Add options here -->
+                    <option value="sound1">Sound 1</option>
+                    <option value="sound2">Sound 2</option>
+                    <option value="sound3">Sound 3</option>
+                    <option value="sound4">Sound 4</option>
+                    <option value="sound5">Sound 5</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <!-- Audio Section -->
+            <div class="audio-section">
+                <label>Audio Preview:</label>
+                <audio controls id="audioPlayer">
+                    <!-- The source of the audio file will be set dynamically using JavaScript -->
+                    <source id="sound1" src="assets/sounds/enchanted-chimes-177906.mp3" type="audio/mp3">
+                    <source id="sound2"
+                        src="assets/sounds/carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3"
+                        type="audio/mp3">
+                    <source id="sound3" src="assets/sounds/jingle-family-174542.mp3" type="audio/mp3">
+                    <source id="sound4" src="assets/sounds/joyful-snowman_60sec-176773.mp3" type="audio/mp3">
+                    <source id="sound5"
+                        src="assets/sounds/we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3"
+                        type="audio/mp3">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <!-- Write Text Section -->
+            <div class="write-text">
+                <label for="textArea">Write Text:</label>
+                <textarea id="textArea" class="form-control" rows="2"></textarea>
+            </div>
+
+            <!-- Social Network Icons Section -->
+            <div class="social-icons">
+                <!-- Add your social network icons here -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #640404">
+      <section class="mb-4 text-center social-links">
+          <p>Share this interactive card:</p>
+
+          <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://facebook.com" target="_blank"
+              rel="noopener" aria-label="Share on Facebook">
+              <i class="fab fa-facebook">
+              </i>
+          </a>
+
+          <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com" target="_blank"
+              rel="noopener" aria-label="Share on Twitter">
+              <i class="fab fa-twitter-square">
+              </i>
+          </a>
+
+          <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://youtube.com" target="_blank"
+              rel="noopener" aria-label="Share on YouTube">
+              <i class="fab fa-youtube-square">
+              </i>
+          </a>
+
+          <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
+              rel="noopener" aria-label="Share on Instagram">
+              <i class="fab fa-instagram">
+              </i>
+          </a>
+          <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://wa.me" target="_blank"
+              rel="noopener" aria-label="Share on WhatsApp">
+              <i class="fa-brands fa-whatsapp">
+              </i>
+          </a>
+
+          <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"
+              onclick="copyLink('https://team9hackathon.com/interactive-card')" aria-label="Copy Link to Share">
+              <i class="fa-solid fa-link">
+              </i>
+          </a>
+
+          <input class="m-1" type="text" id="shareLink" readonly>
+      </section>
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2023 Copyright:
+              <a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
+          </div>
+  </footer>
+
+  <!-- script for footer section (copy link)-->
+  <script>
+
+      function copyLink(link) {
+          var copyText = document.getElementById("shareLink");
+          copyText.value = link;
+
+          /* Select the text field */
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+          /* Copy the text inside the text field */
+          document.execCommand("copy");
+
+          /* Alert the copied text */
+          alert("Copied the link to share: " + copyText.value);
+      }
+  </script>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
+=======
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
