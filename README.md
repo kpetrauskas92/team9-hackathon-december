@@ -13,9 +13,6 @@
 <p align="center">
   <img src="assets/images/images-santa/santa-gifts.jpg" alt="Santa with Gifts">
 </p>
-=======
-# Description
-
 
 # Credits
 
@@ -117,12 +114,12 @@ Before you begin, make sure you have the following installed:
 ![Team Logo](assets/images/images-README.md/team-nodes.jpg)
 
 
-&#x2744; Amirhossein
+&#x2744; [Amirhossein](https://www.linkedin.com/in/pkarolisdev/)
 
-&#x2744; Armando
+&#x2744; [Armando](https://www.linkedin.com/in/armandourquiola/)
 
-&#x2744; Karolis
+&#x2744; [Karolis](https://www.linkedin.com/in/pkarolisdev/)
 
-&#x2744; Sam
+&#x2744; [Sam](https://www.linkedin.com/in/sam-o-brien-olinger-b658283a/)
 
-&#x2744; Taher
+&#x2744; [Taher](https://www.linkedin.com/in/taher-m/)
