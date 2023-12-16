@@ -29,16 +29,80 @@ const updateURL = () => {
 }
 
 function showSelectedImage() {
-  // const imageSource = document.getElementsByName('imagesrc').textContent
-  // alert(imageSource)
-  // if (imageSource === 'internal') {
-  //   // Get the selected option value
-  const selectedValue = document.getElementById('imageSelect').value
-  document.getElementById('imageCard').src = IMAGE_CARD_URL + selectedValue
-  // } else {
-  //   const selectedValue = document.getElementById('imageurl').value
-  //   document.getElementById('imageCard').src = IMAGE_CARD_URL + selectedValue
-  // }
+  const imageSource = document.getElementsByName('imagesrc')
+
+  let imageSourceVal = ''
+  imageSource.forEach(function (element) {
+    if (element.checked) {
+      imageSourceVal = element.value
+    }
+  })
+  if (imageSourceVal === 'internal') {
+    // Get the selected option value
+    const selectedValue = document.getElementById('imageSelect').value
+    document.getElementById('imageCard').src = IMAGE_CARD_URL + selectedValue
+  } else {
+    const selectedValue = document.getElementById('imageurl').value
+    document.getElementById('imageCard').src = selectedValue
+  }
+}
+
+function playSoundSelected() {
+  const soundSource = document.getElementsByName('soundsrc')
+
+  let soundSourceVal = ''
+  soundSource.forEach(function (element) {
+    if (element.checked) {
+      soundSourceVal = element.value
+    }
+  })
+
+  if (soundSourceVal === 'internal') {
+    const soundSelect = document.getElementById('soundSelect')
+    const audioPlayer = document.getElementById('audioPlayer')
+    const selectedSoundPath = soundSelect.value
+    audioPlayer.src = SOUND_CARD_URL + selectedSoundPath
+    audioPlayer.load()
+    audioPlayer.play()
+  } else {
+    const selectedValue = document.getElementById('soundurl').value
+    const audioPreview = document.getElementById('audioPreview')
+    // if (selectedValue.includes('youtube')) {
+    //   audioPreview.innerHTML = `
+    //   <iframe
+    //         id="videoPlayer"
+    //         class="hidden"
+    //         width="460"
+    //         height="80"
+    //         src="${selectedValue}"
+    //         title=""
+    //         frameborder="0"
+    //         autoplay
+    //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    //         ></iframe>`
+    // } else {
+    //   audioPreview.innerHTML = `
+    //   <audio
+    //         id="audioPlayer"
+    //         class="hidden"
+    //         controls
+    //         autoplay
+    //         >
+    //         <source src="${selectedValue}" type="audio/mpeg">
+    //         Your browser does not support the audio element.
+    //   </audio>`
+    // }
+
+    // Get the selected option value
+    // const selectedValue = document.getElementById('soundurl').value
+    // document.getElementById('audioPlayer').src = selectedValue
+    const audioPlayer = document.getElementById('audioPlayer')
+    // alert(selectedValue)
+    // audioPlayer.type = 'audio/mpeg'
+    audioPlayer.src = selectedValue
+    audioPlayer.load()
+    audioPlayer.play()
+  }
 }
 
 function openCard() {
@@ -63,8 +127,24 @@ function openCard() {
 }
 
 const updateCardText = () => {
+  // 20 lines max
   const cardText = document.getElementById('cardText').value
-  document.getElementById('text-inside-card').textContent = cardText
+  let cardTextLines = ''
+  // text-overlay-text
+  cardText.split('\n').forEach(function (line, index) {
+    cardTextLines += `<span class="text-overlay-text">${line}</span><br>`
+  })
+  document.getElementById('text-inside-card').innerHTML = cardTextLines
+
+  // const cantLines = cardText.split('\n').length
+
+  // let textOverlayElement = document.getElementsByClassName('text-overlay')
+  // console.log(textOverlayElement, `${30 * cantLines} px`)
+  // textOverlayElement[0].style.height = `${30 * cantLines} px`
+
+  // const a = $('.text-overlay')
+  // console.log(a)
+  // a.css('height', `${30 * cantLines} px`)
 }
 
 addEventListener('DOMContentLoaded', function () {
@@ -89,32 +169,28 @@ addEventListener('DOMContentLoaded', function () {
   imageurl.addEventListener('change', showSelectedImage)
 
   const soundSelect = document.getElementById('soundSelect')
-  const audioPlayer = document.getElementById('audioPlayer')
-  soundSelect.addEventListener('change', function () {
-    const selectedSoundPath = soundSelect.value
-    // alert(selectedSoundPath)
-    // const audioSource = document.getElementById(soundSource)
-    // const audioSource = selectedSoundPath //document.getElementById(selectedSoundPath)
-    audioPlayer.src = SOUND_CARD_URL + selectedSoundPath
-    audioPlayer.load()
-    audioPlayer.play()
-  })
+  soundSelect.addEventListener('change', playSoundSelected)
 
-  const imageSource = document.getElementsByName('soundsrc')
-  imageSource.forEach(function (element) {
+  const soundurl = document.getElementById('soundurl')
+  soundurl.addEventListener('change', playSoundSelected)
+
+  const soundSource = document.getElementsByName('soundsrc')
+  soundSource.forEach(function (element) {
     element.addEventListener('change', function () {
       // const selectedImage = element.value
       document.getElementById('soundurl').classList.toggle('element-hidden')
       document.getElementById('soundSelect').classList.toggle('element-hidden')
+      playSoundSelected()
     })
   })
 
-  const soundSource = document.getElementsByName('imagesrc')
-  soundSource.forEach(function (element) {
+  const imageSource = document.getElementsByName('imagesrc')
+  imageSource.forEach(function (element) {
     element.addEventListener('change', function () {
       // const selectedImage = element.value
       document.getElementById('imageurl').classList.toggle('element-hidden')
       document.getElementById('imageSelect').classList.toggle('element-hidden')
+      showSelectedImage()
     })
   })
 
