@@ -29,6 +29,8 @@
 - **[UX and UI Design](#uxui-design)**
   - [UX](#ux)
   - [UI](#ui)
+  - [Typography](typography)
+  - [Color Pallette](color-pallette)
 - **[Getting Started](#getting-started)**
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -57,7 +59,7 @@
 
   - [UX](#ux)
 
-    - Wireframes
+    - Wireframe Mock-ups
 
       - ![wireframe-draft1](assets/images/images-README.md/wireframe-draft1.png)
       - ![wireframe-draft2](assets/images/images-README.md/wireframe-draft2.png)
@@ -65,6 +67,22 @@
 
   - [UI](#ui)
     - ![Image1]()
+
+### [Typography](typography)
+- The font used in this project was chosen becuase of it's instantly reconizable and familar feel associated with Christmas.  
+
+
+### [Color Pallette](color-pallette)
+  
+-  The specific color scheme used in this project was selected based on balancing two main criteria. On the one hand, to create a uniquely engaging, appealing, user-friendly interface while simultaneoulsy staying within widely recognized visual themes most associated with Christmas.
+
+   - Color 1
+   - Color 2
+   - Color 3
+
+
+
+
 
 
 ## Getting Started
