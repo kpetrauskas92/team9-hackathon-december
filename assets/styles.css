@@ -1,7 +1,5 @@
 /* styles.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
-
 html, body {
   margin: 0;
 }
@@ -225,6 +223,14 @@ input[type="radio"] {
   z-index: 1;
   text-align: center;
 }
+
+  #cardCover {
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 .element-hidden {
   display: none;
