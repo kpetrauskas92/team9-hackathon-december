@@ -1,8 +1,126 @@
 /* styles.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+html, body {
+  margin: 0;
+}
+
 body {
-  padding-top: 70px;
-  /* Adjust according to your logo height */
+  background-color: #073607;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('svg/ChristmasPattern.svg');
+  background-size: cover;
+  background-size: 20%;
+  opacity: 0.1;
+  z-index: -2;
+}
+
+nav {
+  background-color: #980505;
+  z-index: 1;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav-logo {
+  /* Center the logo */
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+}
+
+label {
+  align-content: center;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+select.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+    border-color: #980505;
+    outline: none;
+}
+
+textarea.form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea.form-control:focus {
+  border-color: #980505;
+  outline: none;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(white, white);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .logo {
@@ -37,20 +155,6 @@ body {
 
 .social-icons {
   margin-top: 15px;
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
 }
 
 .card {
@@ -99,11 +203,13 @@ body {
 .image-container {
   position: relative;
   display: inline-block;
+  height: 35vw;
 }
 
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-container .text-overlay {
@@ -123,4 +229,10 @@ body {
 .element-hidden {
   display: none;
   visibility: hidden;
+}
+
+footer {
+  margin-top: 70px;
+  position: sticky;
+  bottom: 0;
 }
