@@ -1,4 +1,3 @@
-
 # The Merry Hackmas Card Creator
 
 ![nodes4lifeyo](assets/images/images-README.md/nodemas.png)
@@ -11,18 +10,15 @@
 </P>
 
 <p align="center">
-  <img src="assets/images/images-santa/santa-gifts.jpg" alt="Santa with Gifts">
+  <img src="assets/images/images-README.md/santa-envelope.jpg" alt="Santa with Gifts">
 </p>
-
-# Credits
-
 
 <p align="center">
   <strong><a href="https://teman67.github.io/team9-hackathon-december">Click Here</a></strong> to see the deployed website.
 </p>
 
 
-## Table of Contents
+## [Contents](#contents)
 
 - **[Features](#features)**
 - **[Agile Development and User Stories](#agile-development-and-user-stories)**
@@ -141,3 +137,7 @@ Before you begin, make sure you have the following installed:
 &#x2744; [Sam](https://www.linkedin.com/in/sam-o-brien-olinger-b658283a/)
 
 &#x2744; [Taher](https://www.linkedin.com/in/taher-m/)
+
+&#x2744; Also see the **[About us page](about-us.html)**
+
+**Click Here to go back to [Contents](#contents)**
