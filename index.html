@@ -57,8 +57,8 @@
               class="img-fluid mt-2"
               id="imageCard"
             />
-            <div class="text-overlay">
-              <p id="text-inside-card" class="text-overlay-text"></p>
+            <div class="text-overlay" id="text-inside-card" >
+              
             </div>
           </div>
         </div>
@@ -133,15 +133,17 @@
         <!-- Audio Section -->
         <div class="audio-section">
           <label>Audio Preview:</label>
-          <audio controls id="audioPlayer">
-            <!-- The source of the audio file will be set dynamically using JavaScript -->
-            <source
-              id="soundSource"
-              src="assets/sounds/enchanted-chimes-177906.mp3"
-              type="audio/mp3"
-            />
-            Your browser does not support the audio tag.
-          </audio>
+          <div id="audioPreview">
+            <audio controls id="audioPlayer">
+                <!-- The source of the audio file will be set dynamically using JavaScript -->
+                <source
+                  id="soundSource"
+                  src="assets/sounds/enchanted-chimes-177906.mp3"
+                  type="audio/mp3"
+                />
+                Your browser does not support the audio tag.
+              </audio>
+          </div>
         </div>
 
         <!-- Write Text Section -->
