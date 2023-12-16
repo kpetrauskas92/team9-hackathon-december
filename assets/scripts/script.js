@@ -1,4 +1,5 @@
 const PLAYURL = 'play.js?'
+const IMAGE_CARD_URL = 'assets/images/options/'
 
 const updateURL = () => {
   let url = `${PLAYURL}?`
@@ -29,18 +30,7 @@ const updateURL = () => {
 function showSelectedImage() {
   // Get the selected option value
   const selectedValue = document.getElementById('imageSelect').value
-
-  // Hide all images
-  const allImages = document.querySelectorAll('.choose-image img')
-  allImages.forEach(function (image) {
-    image.style.display = 'none'
-  })
-
-  // Show the selected image
-  const selectedImage = document.getElementById(selectedValue)
-  if (selectedImage) {
-    selectedImage.style.display = 'block'
-  }
+  document.getElementById('imageCard').src = IMAGE_CARD_URL + selectedValue
 }
 
 function openCard() {
