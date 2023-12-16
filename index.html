@@ -209,10 +209,73 @@ Merry Christmas</textarea
       </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>&copy; 2023 The North Pole Nodes</p>
-    </footer>
+        <!-- Footer Section -->
+        <footer class="text-center text-lg-start text-white" style="background-color: #640404">
+          <section class="mb-4 text-center social-links">
+              <p>Share this interactive card:</p>
+    
+              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://facebook.com" target="_blank"
+                  rel="noopener" aria-label="Share on Facebook">
+                  <i class="fab fa-facebook">
+                  </i>
+              </a>
+    
+              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com" target="_blank"
+                  rel="noopener" aria-label="Share on Twitter">
+                  <i class="fab fa-twitter-square">
+                  </i>
+              </a>
+    
+              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://youtube.com" target="_blank"
+                  rel="noopener" aria-label="Share on YouTube">
+                  <i class="fab fa-youtube-square">
+                  </i>
+              </a>
+    
+              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
+                  rel="noopener" aria-label="Share on Instagram">
+                  <i class="fab fa-instagram">
+                  </i>
+              </a>
+              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://wa.me" target="_blank"
+                  rel="noopener" aria-label="Share on WhatsApp">
+                  <i class="fa-brands fa-whatsapp">
+                  </i>
+              </a>
+    
+              <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"
+                  onclick="copyLink('https://team9hackathon.com/interactive-card')" aria-label="Copy Link to Share">
+                  <i class="fa-solid fa-link">
+                  </i>
+              </a>
+    
+              <input class="m-1" type="text" id="shareLink" readonly>
+          </section>
+              <!-- Copyright -->
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                  © 2023 Copyright:
+                  <a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
+              </div>
+      </footer>
+    
+      <!-- script for footer section (copy link)-->
+      <script>
+    
+          function copyLink(link) {
+              var copyText = document.getElementById("shareLink");
+              copyText.value = link;
+    
+              /* Select the text field */
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+    
+              /* Alert the copied text */
+              alert("Copied the link to share: " + copyText.value);
+          }
+      </script>
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
