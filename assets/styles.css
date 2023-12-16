@@ -119,3 +119,8 @@ body {
   z-index: 1;
   text-align: center;
 }
+
+.element-hidden {
+  display: none;
+  visibility: hidden;
+}

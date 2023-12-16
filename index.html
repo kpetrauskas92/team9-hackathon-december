@@ -30,7 +30,8 @@
         <!-- Choose Image Section -->
         <div class="choose-image">
           <label for="imageSelect">Choose Image:</label>
-          <select name="image" id="imageSelect" class="form-control">
+
+          <select name="imageopt" id="imageSelect" class="form-control">
             <option value="christmas-card-1843552_1280.jpg">
               Christmas Card
             </option>
@@ -40,6 +41,15 @@
             <option value="red-2892235_1280.jpg">Christmas tree red</option>
             <option value="wood-1776060_1280.jpg">Apple</option>
           </select>
+
+          <input
+            type="text"
+            name="imageurl"
+            id="imageurl"
+            class="form-control element-hidden"
+            placeholder="Image URL"
+          />
+
           <div class="image-container">
             <img
               src="assets/images/options/christmas-card-1843552_1280.jpg"
@@ -111,6 +121,13 @@
             </option>
             <!-- Add more options as needed -->
           </select>
+          <input
+            type="text"
+            name="soundurl"
+            id="soundurl"
+            class="form-control element-hidden"
+            placeholder="Sound URL"
+          />
         </div>
 
         <!-- Audio Section -->
@@ -119,7 +136,7 @@
           <audio controls id="audioPlayer">
             <!-- The source of the audio file will be set dynamically using JavaScript -->
             <source
-              id="sound1"
+              id="soundSource"
               src="assets/sounds/enchanted-chimes-177906.mp3"
               type="audio/mp3"
             />
@@ -133,35 +150,54 @@
           <textarea name="ctext" id="cardText" class="form-control" rows="2">
 Merry Christmas</textarea
           >
+        </div>
 
-          <!-- Text position -->
-          <div class="form-check mt-2">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="tpos"
-              id="textPosition1"
-              value="top"
-              checked
-            />
-            <label class="form-check-label" for="textPosition1"> Top </label>
-            <input
-              class="form-check-input"
-              type="radio"
-              name="tpos"
-              id="textPosition3"
-              value="center"
-            />
-            <label class="form-check-label" for="textPosition3"> Center </label>
-            <input
-              class="form-check-input"
-              type="radio"
-              name="tpos"
-              id="textPosition2"
-              value="bottom"
-            />
-            <label class="form-check-label" for="textPosition2"> Bottom </label>
-          </div>
+        <div class="Video">
+          <label for="videoUrl">Video URL:</label>
+          <input
+            name="video"
+            id="videoUrl"
+            class="form-control"
+            rows="2"
+            placeholder="http://www.youtube.com/embed/VIDEO_ID"
+          />
+        </div>
+
+        <div class="options-configuration">
+          <input type="radio" name="tpos" id="tpos1" value="top" checked />
+          <label for="tpos1">top</label>
+          <input type="radio" name="tpos" id="tpos2" value="middle" />
+          <label for="tpos2">middle</label>
+          <input type="radio" name="tpos" id="tpos3" value="bottom" />
+          <label for="tpos3">bottom</label>
+          [Text Position]
+        </div>
+
+        <div class="options-configuration">
+          <input
+            type="radio"
+            name="imagesrc"
+            id="imagesrc1"
+            value="internal"
+            checked
+          />
+          <label for="imagesrc1">internal</label>
+          <input type="radio" name="imagesrc" id="imagesrc2" value="external" />
+          <label for="imagesrc2">external</label>
+          [Image Source]
+        </div>
+        <div class="options-configuration">
+          <input
+            type="radio"
+            name="soundsrc"
+            id="soundsrc2"
+            value="internal"
+            checked
+          />
+          <label for="soundsrc1">internal</label>
+          <input type="radio" name="soundsrc" id="soundsrc2" value="external" />
+          <label for="soundsrc2">external</label>
+          [Sound Source]
         </div>
 
         <!-- Social Network Icons Section -->

@@ -8,7 +8,7 @@ const updateURL = () => {
   const elementsInput = document.querySelectorAll('.form-control')
   elementsInput.forEach(function (element) {
     if (element.value !== '' && element.name !== '') {
-      console.log(element.name, '=', element.value)
+      // console.log(element.name, '=', element.value)
       url += `${element.name}=${element.value}&`
     }
   })
@@ -16,7 +16,7 @@ const updateURL = () => {
   radioButtons = document.querySelectorAll('input[type=radio]:checked')
   radioButtons.forEach(function (radioButton) {
     if (radioButton.value !== '' && radioButton.name !== '') {
-      console.log(radioButton.name, '=', radioButton.value)
+      // console.log(radioButton.name, '=', radioButton.value)
       url += `${radioButton.name}=${radioButton.value}&`
     }
   })
@@ -29,9 +29,16 @@ const updateURL = () => {
 }
 
 function showSelectedImage() {
-  // Get the selected option value
+  // const imageSource = document.getElementsByName('imagesrc').textContent
+  // alert(imageSource)
+  // if (imageSource === 'internal') {
+  //   // Get the selected option value
   const selectedValue = document.getElementById('imageSelect').value
   document.getElementById('imageCard').src = IMAGE_CARD_URL + selectedValue
+  // } else {
+  //   const selectedValue = document.getElementById('imageurl').value
+  //   document.getElementById('imageCard').src = IMAGE_CARD_URL + selectedValue
+  // }
 }
 
 function openCard() {
@@ -78,6 +85,9 @@ addEventListener('DOMContentLoaded', function () {
   const imageSelect = document.getElementById('imageSelect')
   imageSelect.addEventListener('change', showSelectedImage)
 
+  const imageurl = document.getElementById('imageurl')
+  imageurl.addEventListener('change', showSelectedImage)
+
   const soundSelect = document.getElementById('soundSelect')
   const audioPlayer = document.getElementById('audioPlayer')
   soundSelect.addEventListener('change', function () {
@@ -88,6 +98,24 @@ addEventListener('DOMContentLoaded', function () {
     audioPlayer.src = SOUND_CARD_URL + selectedSoundPath
     audioPlayer.load()
     audioPlayer.play()
+  })
+
+  const imageSource = document.getElementsByName('soundsrc')
+  imageSource.forEach(function (element) {
+    element.addEventListener('change', function () {
+      // const selectedImage = element.value
+      document.getElementById('soundurl').classList.toggle('element-hidden')
+      document.getElementById('soundSelect').classList.toggle('element-hidden')
+    })
+  })
+
+  const soundSource = document.getElementsByName('imagesrc')
+  soundSource.forEach(function (element) {
+    element.addEventListener('change', function () {
+      // const selectedImage = element.value
+      document.getElementById('imageurl').classList.toggle('element-hidden')
+      document.getElementById('imageSelect').classList.toggle('element-hidden')
+    })
   })
 
   // const cardText = document.getElementById('cardText')
