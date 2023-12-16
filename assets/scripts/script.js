@@ -1,5 +1,6 @@
-const PLAYURL = 'play.js?'
+const PLAYURL = 'play.js'
 const IMAGE_CARD_URL = 'assets/images/options/'
+const SOUND_CARD_URL = 'assets/sounds/'
 
 const updateURL = () => {
   let url = `${PLAYURL}?`
@@ -81,8 +82,10 @@ addEventListener('DOMContentLoaded', function () {
   const audioPlayer = document.getElementById('audioPlayer')
   soundSelect.addEventListener('change', function () {
     const selectedSoundPath = soundSelect.value
-    const audioSource = document.getElementById(selectedSoundPath)
-    audioPlayer.src = audioSource.src
+    // alert(selectedSoundPath)
+    // const audioSource = document.getElementById(soundSource)
+    // const audioSource = selectedSoundPath //document.getElementById(selectedSoundPath)
+    audioPlayer.src = SOUND_CARD_URL + selectedSoundPath
     audioPlayer.load()
     audioPlayer.play()
   })
