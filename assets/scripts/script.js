@@ -1,27 +1,99 @@
+const PLAYURL = 'play.js?'
+
+const updateURL = () => {
+  let url = `${PLAYURL}?`
+
+  const elementsInput = document.querySelectorAll('.form-control')
+  elementsInput.forEach(function (element) {
+    if (element.value !== '' && element.name !== '') {
+      console.log(element.name, '=', element.value)
+      url += `${element.name}=${element.value}&`
+    }
+  })
+
+  radioButtons = document.querySelectorAll('input[type=radio]:checked')
+  radioButtons.forEach(function (radioButton) {
+    if (radioButton.value !== '' && radioButton.name !== '') {
+      console.log(radioButton.name, '=', radioButton.value)
+      url += `${radioButton.name}=${radioButton.value}&`
+    }
+  })
+
+  // Remove the last "&" character
+  url = url.slice(0, -1)
+
+  document.getElementById('debugURL').value = url
+  return url
+}
+
 function showSelectedImage() {
   // Get the selected option value
-  var selectedValue = document.getElementById("imageSelect").value;
+  const selectedValue = document.getElementById('imageSelect').value
 
   // Hide all images
-  var allImages = document.querySelectorAll('.choose-image img');
+  const allImages = document.querySelectorAll('.choose-image img')
   allImages.forEach(function (image) {
-      image.style.display = 'none';
-  });
+    image.style.display = 'none'
+  })
 
   // Show the selected image
-  var selectedImage = document.getElementById(selectedValue);
+  const selectedImage = document.getElementById(selectedValue)
   if (selectedImage) {
-      selectedImage.style.display = 'block';
+    selectedImage.style.display = 'block'
   }
 }
 
-const soundSelect = document.getElementById('soundSelect');
-const audioPlayer = document.getElementById('audioPlayer');
+function openCard() {
+  const card = document.getElementById('card')
+  const cardCover = document.getElementById('cardCover')
 
-soundSelect.addEventListener('change', function () {
-  const selectedSoundPath = soundSelect.value;
-  const audioSource = document.getElementById(selectedSoundPath);
-  audioPlayer.src = audioSource.src;
-  audioPlayer.load();
-  audioPlayer.play();
-});
+  // Add a random background image from the "assets" folder
+  const randomImages = [
+    'assets/images/santa-brown.jpg',
+    'assets/images/santa-gifts.jpg',
+    'assets/images/santa-magic.jpg',
+    'assets/images/santa-pipe.jpg',
+    'assets/images/stampa.jpg',
+    'assets/images/two-santas.jpg',
+  ]
+  const randomImage =
+    randomImages[Math.floor(Math.random() * randomImages.length)]
+
+  cardCover.style.backgroundImage = `url("assets/${randomImage}")`
+
+  card.classList.toggle('open')
+}
+
+addEventListener('DOMContentLoaded', function () {
+  const elementsInput = document.querySelectorAll('.form-control')
+  elementsInput.forEach(function (element) {
+    if (element.name !== '') {
+      element.addEventListener('change', updateURL)
+    }
+  })
+
+  const radioButtons = document.querySelectorAll('input[type=radio]')
+  radioButtons.forEach(function (radioButton) {
+    if (radioButton.name !== '') {
+      radioButton.addEventListener('change', updateURL)
+    }
+  })
+
+  const imageSelect = document.getElementById('imageSelect')
+  imageSelect.addEventListener('change', showSelectedImage)
+
+  const soundSelect = document.getElementById('soundSelect')
+  const audioPlayer = document.getElementById('audioPlayer')
+  soundSelect.addEventListener('change', function () {
+    const selectedSoundPath = soundSelect.value
+    const audioSource = document.getElementById(selectedSoundPath)
+    audioPlayer.src = audioSource.src
+    audioPlayer.load()
+    audioPlayer.play()
+  })
+
+  // const cardText = document.getElementById('cardText')
+  // cardText.addEventListener('keyup', updateURL)
+})
+
+updateURL()

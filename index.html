@@ -28,11 +28,7 @@
         <!-- Choose Image Section -->
         <div class="choose-image">
           <label for="imageSelect">Choose Image:</label>
-          <select
-            id="imageSelect"
-            class="form-control"
-            onchange="showSelectedImage()"
-          >
+          <select name="image" id="imageSelect" class="form-control">
             <option value="image1">Christmas Card</option>
             <option value="image2">Christmas tree</option>
             <option value="image3">Christmas tree red</option>
@@ -71,11 +67,34 @@
         <div class="form-row mt-3">
           <div class="form-group col-md-6">
             <label for="senderName">Sender Name:</label>
-            <input type="text" class="form-control" id="senderName" />
+            <input
+              name="sname"
+              type="text"
+              class="form-control"
+              id="senderName"
+            />
           </div>
           <div class="form-group col-md-6">
             <label for="receiverName">Receiver Name:</label>
-            <input type="text" class="form-control" id="receiverName" />
+            <input
+              name="rname"
+              type="text"
+              class="form-control"
+              id="receiverName"
+            />
+          </div>
+        </div>
+
+        <!-- Debug URL -->
+        <div class="row mt-3">
+          <div class="col col-md-12">
+            <label for="debug">Debug URL:</label>
+            <textarea
+              class="form-control"
+              id="debugURL"
+              rows="2"
+              readonly
+            ></textarea>
           </div>
         </div>
       </div>
@@ -85,7 +104,7 @@
         <!-- Choose Sound Section -->
         <div class="choose-sound">
           <label for="soundSelect">Choose Sound:</label>
-          <select id="soundSelect" class="form-control">
+          <select name="sound" id="soundSelect" class="form-control">
             <!-- Add options here -->
             <option value="sound1">Sound 1</option>
             <option value="sound2">Sound 2</option>
@@ -132,15 +151,20 @@
 
         <!-- Write Text Section -->
         <div class="write-text">
-          <label for="textArea">Write Text:</label>
-          <textarea id="textArea" class="form-control" rows="2"></textarea>
+          <label for="cardText">Write Text:</label>
+          <textarea
+            name="ctext"
+            id="cardText"
+            class="form-control"
+            rows="2"
+          ></textarea>
 
           <!-- Text position -->
           <div class="form-check mt-2">
             <input
               class="form-check-input"
               type="radio"
-              name="textPosition"
+              name="tpos"
               id="textPosition1"
               value="top"
               checked
@@ -149,7 +173,7 @@
             <input
               class="form-check-input"
               type="radio"
-              name="textPosition"
+              name="tpos"
               id="textPosition3"
               value="center"
             />
@@ -157,7 +181,7 @@
             <input
               class="form-check-input"
               type="radio"
-              name="textPosition"
+              name="tpos"
               id="textPosition2"
               value="bottom"
             />
