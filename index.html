@@ -17,9 +17,11 @@
 
   <body>
     <!-- Logo Section -->
+    <!-- 
     <div class="container">
       <img src="" alt="Logo" class="logo" />
     </div>
+     -->
 
     <!-- Main Content Section -->
     <div class="container main-container">
@@ -38,12 +40,17 @@
             <option value="red-2892235_1280.jpg">Christmas tree red</option>
             <option value="wood-1776060_1280.jpg">Apple</option>
           </select>
-          <img
-            src="assets/images/options/christmas-card-1843552_1280.jpg"
-            alt="Selected Image"
-            class="img-fluid mt-2"
-            id="imageCard"
-          />
+          <div class="image-container">
+            <img
+              src="assets/images/options/christmas-card-1843552_1280.jpg"
+              alt="Selected Image"
+              class="img-fluid mt-2"
+              id="imageCard"
+            />
+            <div class="text-overlay">
+              <p id="text-inside-card" class="text-overlay-text"></p>
+            </div>
+          </div>
         </div>
 
         <!-- Sender and Receiver Names Section -->
@@ -135,12 +142,9 @@
         <!-- Write Text Section -->
         <div class="write-text">
           <label for="cardText">Write Text:</label>
-          <textarea
-            name="ctext"
-            id="cardText"
-            class="form-control"
-            rows="2"
-          ></textarea>
+          <textarea name="ctext" id="cardText" class="form-control" rows="2">
+Merry Christmas</textarea
+          >
 
           <!-- Text position -->
           <div class="form-check mt-2">

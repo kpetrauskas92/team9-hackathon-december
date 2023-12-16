@@ -54,6 +54,11 @@ function openCard() {
   card.classList.toggle('open')
 }
 
+const updateCardText = () => {
+  const cardText = document.getElementById('cardText').value
+  document.getElementById('text-inside-card').textContent = cardText
+}
+
 addEventListener('DOMContentLoaded', function () {
   const elementsInput = document.querySelectorAll('.form-control')
   elementsInput.forEach(function (element) {
@@ -83,7 +88,10 @@ addEventListener('DOMContentLoaded', function () {
   })
 
   // const cardText = document.getElementById('cardText')
-  // cardText.addEventListener('keyup', updateURL)
+  cardText.addEventListener('keyup', function () {
+    updateCardText()
+  })
 })
 
+updateCardText()
 updateURL()
