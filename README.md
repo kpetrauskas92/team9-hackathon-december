@@ -13,6 +13,8 @@
   <img src="assets/images/images-README.md/santa-envelope.jpg" alt="Santa with Gifts">
 </p>
 
+# Credits
+
 <p align="center">
   <strong><a href="https://teman67.github.io/team9-hackathon-december">Click Here</a></strong> to see the deployed website.
 </p>
@@ -75,11 +77,6 @@
    - Color 1
    - Color 2
    - Color 3
-
-
-
-
-
 
 ## Getting Started
 
