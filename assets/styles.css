@@ -99,11 +99,13 @@ body {
 .image-container {
   position: relative;
   display: inline-block;
+  height: 35vw;
 }
 
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-container .text-overlay {
