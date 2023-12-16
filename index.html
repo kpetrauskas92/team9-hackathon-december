@@ -1,283 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <!-- Link to the external CSS file -->
-    <title>The North Pole Nodes</title>
-  </head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+					rel="stylesheet"
+					integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+					crossorigin="anonymous"
+		>
 
-  <body>
-    <!-- Logo Section -->
-    <!-- 
-    <div class="container">
-      <img src="" alt="Logo" class="logo" />
-    </div>
-     -->
+		<!-- Link to the external CSS file -->
+		<link rel="stylesheet" href="assets/styles.css">
+		<script src="assets/scripts/pure-snow.js" defer></script>
 
-    <!-- Main Content Section -->
-    <div class="container main-container">
-      <!-- Left Section -->
-      <div class="left-section">
-        <!-- Choose Image Section -->
-        <div class="choose-image">
-          <label for="imageSelect">Choose Image:</label>
+		<title>The North Pole Nodes</title>
+	</head>
 
-          <select name="imageopt" id="imageSelect" class="form-control">
-            <option value="christmas-card-1843552_1280.jpg">
-              Christmas Card
-            </option>
-            <option value="christmas-tree-2928142_1280.jpg">
-              Christmas tree
-            </option>
-            <option value="red-2892235_1280.jpg">Christmas tree red</option>
-            <option value="wood-1776060_1280.jpg">Apple</option>
-          </select>
+	<body>
+		<div id="snow" data-count="200"></div>
+		<nav class="nav-container py-2 px-4">
+			<a href="index.html" class="nav-link">Home</a>
+		
+			<a href="index.html" class="nav-logo">
+				<img src="assets/images/logo/logo.png" alt="Logo" class="logo">
+			</a>
+		
+			<a href="about.html" class="nav-link">About</a>
+		</nav>
+		
+		
+	
+		<div class="pt-2 px-5 text-center">
+			<div class="py-4">
+				<h1>Create a personalised and interactive christmas greetings card</h1>
+			</div>
+		</div>
 
-          <input
-            type="text"
-            name="imageurl"
-            id="imageurl"
-            class="form-control element-hidden"
-            placeholder="Image URL"
-          />
+		<!-- Main Content Section -->
+		<div class="container main-container h-100 pt-2 ">
 
-          <div class="image-container">
-            <img
-              src="assets/images/options/christmas-card-1843552_1280.jpg"
-              alt="Selected Image"
-              class="img-fluid mt-2"
-              id="imageCard"
-            />
-            <div class="text-overlay">
-              <p id="text-inside-card" class="text-overlay-text"></p>
-            </div>
-          </div>
-        </div>
+			<!-- Left Section -->
+			<div class="left-section p-4 bg-white rounded-2 shadow-lg">
+				<!-- Choose Image Section -->
+				<div class="choose-image">
+					<label for="imageSelect">Choose Image:</label>
+					<select name="imageopt" id="imageSelect" class="form-control">
+						<option value="christmas-card-1843552_1280.jpg">
+							Christmas Card
+						</option>
+						<option value="christmas-tree-2928142_1280.jpg">
+							Christmas tree
+						</option>
+						<option value="red-2892235_1280.jpg">Christmas tree red</option>
+						<option value="wood-1776060_1280.jpg">Apple</option>
+					</select>
 
-        <!-- Sender and Receiver Names Section -->
-        <div class="form-row mt-3">
-          <div class="form-group col-md-6">
-            <label for="senderName">Sender Name:</label>
-            <input
-              name="sname"
-              type="text"
-              class="form-control"
-              id="senderName"
-            />
-          </div>
-          <div class="form-group col-md-6">
-            <label for="receiverName">Receiver Name:</label>
-            <input
-              name="rname"
-              type="text"
-              class="form-control"
-              id="receiverName"
-            />
-          </div>
-        </div>
+					<input
+						type="text"
+						name="imageurl"
+						id="imageurl"
+						class="form-control element-hidden"
+						placeholder="Image URL"
+					>
+					<div class="text-center pt-2">
+						<p>Preview</p>
+					</div>
+					<div class="image-container">
+						<img
+							src="assets/images/options/christmas-card-1843552_1280.jpg"
+							alt="Selected Image"
+							class="img-fluid mt-2"
+							id="imageCard"
+						/>
+						<div class="text-overlay">
+							<p id="text-inside-card" class="text-overlay-text"></p>
+						</div>
+					</div>
+				</div>
 
-        <!-- Debug URL -->
-        <div class="row mt-3">
-          <div class="col col-md-12">
-            <label for="debugURL">Debug URL:</label>
-            <textarea
-              class="form-control"
-              id="debugURL"
-              rows="2"
-              readonly
-            ></textarea>
-          </div>
-        </div>
-      </div>
+				<!-- Sender and Receiver Names Section -->
+				<div class="form-row mt-3">
+					<div class="form-group col-md-6">
+						<label for="senderName">Sender Name:</label>
+						<input
+							name="sname"
+							type="text"
+							class="form-control"
+							id="senderName"
+						/>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="receiverName">Receiver Name:</label>
+						<input
+							name="rname"
+							type="text"
+							class="form-control"
+							id="receiverName"
+						/>
+					</div>
+				</div>
 
-      <!-- Right Section -->
-      <div class="right-section">
-        <!-- Choose Sound Section -->
-        <div class="choose-sound">
-          <label for="soundSelect">Choose Sound:</label>
-          <select name="sound" id="soundSelect" class="form-control">
-            <!-- Add options here -->
-            <option value="enchanted-chimes-177906.mp3">Sound 1</option>
-            <option
-              value="carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3"
-            >
-              Sound 2
-            </option>
-            <option value="jingle-family-174542.mp3">Sound 3</option>
-            <option value="joyful-snowman_60sec-176773.mp3">Sound 4</option>
-            <option
-              value="we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3"
-            >
-              Sound 5
-            </option>
-            <!-- Add more options as needed -->
-          </select>
-          <input
-            type="text"
-            name="soundurl"
-            id="soundurl"
-            class="form-control element-hidden"
-            placeholder="Sound URL"
-          />
-        </div>
+				<!-- Debug URL -->
+				<div class="row mt-3">
+					<div class="col col-md-12">
+						<label for="debugURL">Debug URL:</label>
+						<textarea
+							class="form-control"
+							id="debugURL"
+							rows="2"
+							readonly
+						></textarea>
+					</div>
+				</div>
+			</div>
 
-        <!-- Audio Section -->
-        <div class="audio-section">
-          <label>Audio Preview:</label>
-          <audio controls id="audioPlayer">
-            <!-- The source of the audio file will be set dynamically using JavaScript -->
-            <source
-              id="soundSource"
-              src="assets/sounds/enchanted-chimes-177906.mp3"
-              type="audio/mp3"
-            />
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
+			<!-- Right Section -->
+			<div class="right-section p-4 bg-white rounded-2">
+				<!-- Choose Sound Section -->
+				<div class="choose-sound">
+					<label for="soundSelect">Choose Sound:</label>
+					<select name="sound" id="soundSelect" class="form-control">
+						<!-- Add options here -->
+						<option value="enchanted-chimes-177906.mp3">Sound 1</option>
+						<option
+							value="carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3"
+						>
+							Sound 2
+						</option>
+						<option value="jingle-family-174542.mp3">Sound 3</option>
+						<option value="joyful-snowman_60sec-176773.mp3">Sound 4</option>
+						<option
+							value="we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3"
+						>
+							Sound 5
+						</option>
+						<!-- Add more options as needed -->
+					</select>
+					<input
+						type="text"
+						name="soundurl"
+						id="soundurl"
+						class="form-control element-hidden"
+						placeholder="Sound URL"
+					/>
+				</div>
 
-        <!-- Write Text Section -->
-        <div class="write-text">
-          <label for="cardText">Write Text:</label>
-          <textarea name="ctext" id="cardText" class="form-control" rows="2">
-Merry Christmas</textarea
-          >
-        </div>
+				<!-- Audio Section -->
+				<div class="audio-section py-2">
+					<label>Audio Preview:</label>
+					<audio class="rounded-2 bg-warning" controls id="audioPlayer">
+						<!-- The source of the audio file will be set dynamically using JavaScript -->
+						<source
+							id="soundSource"
+							src="assets/sounds/enchanted-chimes-177906.mp3"
+							type="audio/mp3"
+						/>
+						Your browser does not support the audio tag.
+					</audio>
+				</div>
 
-        <div class="Video">
-          <label for="videoUrl">Video URL:</label>
-          <input
-            name="video"
-            id="videoUrl"
-            class="form-control"
-            rows="2"
-            placeholder="http://www.youtube.com/embed/VIDEO_ID"
-          />
-        </div>
+				<!-- Write Text Section -->
+				<div class="write-text">
+					<label for="cardText">Write Text:</label>
+					<textarea name="ctext" id="cardText" class="form-control" rows="2">
+					Merry Christmas</textarea
+					>
+				</div>
 
-        <div class="options-configuration">
-          <input type="radio" name="tpos" id="tpos1" value="top" checked />
-          <label for="tpos1">top</label>
-          <input type="radio" name="tpos" id="tpos2" value="middle" />
-          <label for="tpos2">middle</label>
-          <input type="radio" name="tpos" id="tpos3" value="bottom" />
-          <label for="tpos3">bottom</label>
-          [Text Position]
-        </div>
+				<div class="Video">
+					<label for="videoUrl">Video URL:</label>
+					<input
+						name="video"
+						id="videoUrl"
+						class="form-control"
+						rows="2"
+						placeholder="http://www.youtube.com/embed/VIDEO_ID"
+					/>
+				</div>
 
-        <div class="options-configuration">
-          <input
-            type="radio"
-            name="imagesrc"
-            id="imagesrc1"
-            value="internal"
-            checked
-          />
-          <label for="imagesrc1">internal</label>
-          <input type="radio" name="imagesrc" id="imagesrc2" value="external" />
-          <label for="imagesrc2">external</label>
-          [Image Source]
-        </div>
-        <div class="options-configuration">
-          <input
-            type="radio"
-            name="soundsrc"
-            id="soundsrc2"
-            value="internal"
-            checked
-          />
-          <label for="soundsrc1">internal</label>
-          <input type="radio" name="soundsrc" id="soundsrc2" value="external" />
-          <label for="soundsrc2">external</label>
-          [Sound Source]
-        </div>
+				<div class="options-configuration">
+					<input type="radio" name="tpos" id="tpos1" value="top" checked />
+					<label for="tpos1">top</label>
+					<input type="radio" name="tpos" id="tpos2" value="middle" />
+					<label for="tpos2">middle</label>
+					<input type="radio" name="tpos" id="tpos3" value="bottom" />
+					<label for="tpos3">bottom</label>
+					[Text Position]
+				</div>
 
-        <!-- Social Network Icons Section -->
-        <div class="social-icons">
-          <!-- Add your social network icons here -->
-        </div>
-      </div>
-    </div>
+				<div class="options-configuration">
+					<input
+						type="radio"
+						name="imagesrc"
+						id="imagesrc1"
+						value="internal"
+						checked
+					/>
+					<label for="imagesrc1">internal</label>
+					<input type="radio" name="imagesrc" id="imagesrc2" value="external" />
+					<label for="imagesrc2">external</label>
+					[Image Source]
+				</div>
+				<div class="options-configuration">
+					<input
+						type="radio"
+						name="soundsrc"
+						id="soundsrc2"
+						value="internal"
+						checked
+					/>
+					<label for="soundsrc1">internal</label>
+					<input type="radio" name="soundsrc" id="soundsrc2" value="external" />
+					<label for="soundsrc2">external</label>
+					[Sound Source]
+				</div>
 
-        <!-- Footer Section -->
-        <footer class="text-center text-lg-start text-white" style="background-color: #640404">
-          <section class="mb-4 text-center social-links">
-              <p>Share this interactive card:</p>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://facebook.com" target="_blank"
-                  rel="noopener" aria-label="Share on Facebook">
-                  <i class="fab fa-facebook">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com" target="_blank"
-                  rel="noopener" aria-label="Share on Twitter">
-                  <i class="fab fa-twitter-square">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://youtube.com" target="_blank"
-                  rel="noopener" aria-label="Share on YouTube">
-                  <i class="fab fa-youtube-square">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
-                  rel="noopener" aria-label="Share on Instagram">
-                  <i class="fab fa-instagram">
-                  </i>
-              </a>
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://wa.me" target="_blank"
-                  rel="noopener" aria-label="Share on WhatsApp">
-                  <i class="fa-brands fa-whatsapp">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"
-                  onclick="copyLink('https://team9hackathon.com/interactive-card')" aria-label="Copy Link to Share">
-                  <i class="fa-solid fa-link">
-                  </i>
-              </a>
-    
-              <input class="m-1" type="text" id="shareLink" readonly>
-          </section>
-              <!-- Copyright -->
-              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                  © 2023 Copyright:
-                  <a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
-              </div>
-      </footer>
-    
-      <!-- script for footer section (copy link)-->
-      <script>
-    
-          function copyLink(link) {
-              var copyText = document.getElementById("shareLink");
-              copyText.value = link;
-    
-              /* Select the text field */
-              copyText.select();
-              copyText.setSelectionRange(0, 99999); /* For mobile devices */
-    
-              /* Copy the text inside the text field */
-              document.execCommand("copy");
-    
-              /* Alert the copied text */
-              alert("Copied the link to share: " + copyText.value);
-          }
-      </script>
+				<!-- Social Network Icons Section -->
+				<div class="social-icons bg-warning p-2 rounded-2">
+					<section class="mb-4 text-center fw-bold social-links">
+						<p>Share this interactive card:</p>
+				
+						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://facebook.com" target="_blank"
+							rel="noopener" aria-label="Share on Facebook">
+							<i class="fab fa-facebook">
+							</i>
+						</a>
+				
+						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com" target="_blank"
+							rel="noopener" aria-label="Share on Twitter">
+							<i class="fab fa-twitter-square">
+							</i>
+						</a>
+				
+						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://youtube.com" target="_blank"
+							rel="noopener" aria-label="Share on YouTube">
+							<i class="fab fa-youtube-square">
+							</i>
+						</a>
+				
+						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
+							rel="noopener" aria-label="Share on Instagram">
+							<i class="fab fa-instagram">
+							</i>
+						</a>
+						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://wa.me" target="_blank"
+							rel="noopener" aria-label="Share on WhatsApp">
+							<i class="fa-brands fa-whatsapp">
+							</i>
+						</a>
+				
+						<a class="btn btn-outline-light btn-floating m-1" role="button" href="#"
+							onclick="copyLink('https://team9hackathon.com/interactive-card')" aria-label="Copy Link to Share">
+							<i class="fa-solid fa-link">
+							</i>
+						</a>
+				
+						<input class="" type="text" id="shareLink" readonly>
+					</section>
+				</div>
+			</div>
+		</div>
 
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/scripts/script.js"></script>
+		<!-- Footer Section -->
+		<footer class="text-center text-lg-start text-white" style="background-color: #980505">
+
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+					© 2023 Copyright:
+					<a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
+			</div>
+		</footer>
+		
+			<!-- script for footer section (copy link)-->
+			<script>
+		
+					function copyLink(link) {
+							var copyText = document.getElementById("shareLink");
+							copyText.value = link;
+		
+							/* Select the text field */
+							copyText.select();
+							copyText.setSelectionRange(0, 99999); /* For mobile devices */
+		
+							/* Copy the text inside the text field */
+							document.execCommand("copy");
+		
+							/* Alert the copied text */
+							alert("Copied the link to share: " + copyText.value);
+					}
+			</script>
+
+		<!-- Bootstrap JS (optional) -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="assets/scripts/script.js"></script>
+	</body>
 </html>
