@@ -139,6 +139,5 @@ Before you begin, make sure you have the following installed:
 
 &#x2744; Also see the **[About us](https://teman67.github.io/team9-hackathon-december/about-us.html)** page.
 
-![Team Photo](assets/images/images-README.md/About_Us.jpeg)
 
 **Click Here to go back to [Contents](#contents)**
