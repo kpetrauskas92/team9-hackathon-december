@@ -59,8 +59,10 @@
 
     - Wireframe Mock-ups
 
-      - ![wireframe-draft1](assets/images/images-README.md/wireframe-draft1.png)
-      - ![wireframe-draft2](assets/images/images-README.md/wireframe-draft2.png)
+      - ![wireframe-draft1.1](assets/images/images-README.md/wireframe-draft1.png)
+      - ![wireframe-draft1.2](assets/images/images-README.md/wireframe-draft2.png)
+
+      - ![wireframe-draft1.1](assets/images/images-README.md/README-draft-mock-up-two.jpg))
 
 
   - [UI](#ui)
@@ -135,6 +137,8 @@ Before you begin, make sure you have the following installed:
 
 &#x2744; [Taher](https://www.linkedin.com/in/taher-m/)
 
-&#x2744; Also see the **[About us page](about-us.html)**
+&#x2744; Also see the **[About us](https://teman67.github.io/team9-hackathon-december/about-us.html)** page.
+
+![Team Photo](assets/images/images-README.md/About_Us.jpeg)
 
 **Click Here to go back to [Contents](#contents)**
