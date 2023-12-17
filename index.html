@@ -89,57 +89,24 @@ Enter your text...
 						</textarea>
 					</div>
 
-					<!-- Choose Image Section -->
-					<div class="choose-image pt-2">
-						<i class="fa-solid fa-image"></i>
-						<label for="imageSelect">Select Image:</label>
-						<select name="imageopt" id="imageSelect" class="form-control">
-							<option value="christmas-card-1843552_1280.jpg">
-								Christmas Card
-							</option>
-							<option value="christmas-tree-2928142_1280.jpg">
-								Christmas tree
-							</option>
-							<option value="red-2892235_1280.jpg">
-								Christmas tree red
-							</option>
-							<option value="wood-1776060_1280.jpg">
-								Apple
-							</option>
-							<option value="christmas-1869902_1280.jpg">
-								Christmas Tree with Gift
-							</option>
-							<option value="christmas-2933008_1280.jpg">
-								Christmas Blue Tree
-							</option>
-							<option value="christmas-3009949_1280.jpg">
-								Pink
-							</option>
-							<option value="christmas-3026685_1280.jpg">
-								Gifts
-							</option>
-							<option value="christmas-3735928_1280.jpg">
-								Yellow Tree with Red Page
-							</option>
-							<option value="christmas-3864552_1280.jpg">
-								Snow
-							</option>
-							<option value="christmas-tree-574742_1280_yellow.jpg">
-								Christmas Yellow Tree
-							</option>
-							<option value="church-648430_1280.jpg">
-								Church
-							</option>
-							<option value="moon-31665_1280.jpg">
-								Moon
-							</option>
-							<option value="north-star-2869817_1280.jpg">
-								North Star
-							</option>
-							<option value="snowman-321034_1280.jpg">
-								Snowman
-							</option>
-						</select>
+    <!-- Main Content Section -->
+    <div class="container main-container">
+      <!-- Left Section -->
+      <div class="left-section">
+        <!-- Choose Image Section -->
+        <div class="choose-image">
+          <label for="imageSelect">Choose Image:</label>
+
+          <select name="imageopt" id="imageSelect" class="form-control">
+            <option value="christmas-card-1843552_1280.jpg">
+              Christmas Card
+            </option>
+            <option value="christmas-tree-2928142_1280.jpg">
+              Christmas tree
+            </option>
+            <option value="red-2892235_1280.jpg">Christmas tree red</option>
+            <option value="wood-1776060_1280.jpg">Apple</option>
+          </select>
 
 						<input
 							type="text"
@@ -228,19 +195,93 @@ Enter your text...
 						</div>
 					</div>
 
-					<!-- Debug URL
-					<div class="row mt-3">
-						<div class="col col-md-12">
-							<label for="debugURL">Debug URL:</label>
-							<textarea
-								class="form-control"
-								id="debugURL"
-								rows="2"
-								readonly
-							></textarea>
-						</div>
-					</div>
-					-->
+        <!-- Debug URL -->
+        <div class="row mt-3">
+          <div class="col col-md-12">
+            <label for="debugURL">Debug URL:</label>
+            <textarea
+              class="form-control"
+              id="debugURL"
+              rows="2"
+              readonly
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-section">
+        <!-- Choose Sound Section -->
+        <div class="choose-sound">
+          <label for="soundSelect">Choose Sound:</label>
+          <select name="sound" id="soundSelect" class="form-control">
+            <!-- Add options here -->
+            <option value="enchanted-chimes-177906.mp3">Sound 1</option>
+            <option
+              value="carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3"
+            >
+              Sound 2
+            </option>
+            <option value="jingle-family-174542.mp3">Sound 3</option>
+            <option value="joyful-snowman_60sec-176773.mp3">Sound 4</option>
+            <option
+              value="we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3"
+            >
+              Sound 5
+            </option>
+            <!-- Add more options as needed -->
+          </select>
+          <input
+            type="text"
+            name="soundurl"
+            id="soundurl"
+            class="form-control element-hidden"
+            placeholder="Sound URL"
+          />
+        </div>
+
+        <!-- Audio Section -->
+        <div class="audio-section">
+          <label>Audio Preview:</label>
+          <audio controls id="audioPlayer">
+            <!-- The source of the audio file will be set dynamically using JavaScript -->
+            <source
+              id="soundSource"
+              src="assets/sounds/enchanted-chimes-177906.mp3"
+              type="audio/mp3"
+            />
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+
+        <!-- Write Text Section -->
+        <div class="write-text">
+          <label for="cardText">Write Text:</label>
+          <textarea name="ctext" id="cardText" class="form-control" rows="2">
+Merry Christmas</textarea
+          >
+        </div>
+
+        <div class="Video">
+          <label for="videoUrl">Video URL:</label>
+          <input
+            name="video"
+            id="videoUrl"
+            class="form-control"
+            rows="2"
+            placeholder="http://www.youtube.com/embed/VIDEO_ID"
+          />
+        </div>
+
+        <div class="options-configuration">
+          <input type="radio" name="tpos" id="tpos1" value="top" checked />
+          <label for="tpos1">top</label>
+          <input type="radio" name="tpos" id="tpos2" value="middle" />
+          <label for="tpos2">middle</label>
+          <input type="radio" name="tpos" id="tpos3" value="bottom" />
+          <label for="tpos3">bottom</label>
+          [Text Position]
+        </div>
 
           <input class="m-1" type="text" id="shareLink" readonly>
       </section>
