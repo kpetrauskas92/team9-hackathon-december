@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003304;
+}
+
+.wrapper {
+  height: 200px;
+  width: 300px;
+  background-color: #dee7ba;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.flap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Flap when closed */
+.flap.one {
+  border-top: 100px solid #3a0202;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Flap when opened */
+.flap.two {
+  border-top: 100px solid #dee7ba;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #3a0202;
+  border-bottom: 100px solid #5f0606;
+  border-left: 150px solid #5f0606;
+  z-index: 3;
+}
+
+/* Card inside envelope */
+.card.one {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: #dee7ba;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.75s;
+}
+
+/* Card being displayed in larger size */
+.card.two {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  z-index: 5;
+  opacity: 0;
+  transition: 3s;
+  z-index: 0;
+}
+
+/* Wrapper hover */
+.wrapper:hover .flap.one {
+  transform: rotateX(90deg);
+  transition-delay: 0s;
+}
+
+.wrapper:hover .flap.two {
+  transform: rotateX(180deg);
+  transition-delay: 0.25s;
+}
+
+.wrapper:hover .card.one {
+  transform: translateY(-200px);
+  transition-delay: 1s;
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out 2s forwards;
+}
+
+/* 2nd card (rendered preview) as overlay if needed */
+/* .wrapper:hover .card.two {
+  transform: translateY(-150px);
+  transition-delay: 1s;
+  opacity: 1;
+  align-items: normal;
+  z-index: 5;
+} */
+
+@keyframes fadeIn {
+  to {
+    opacity: 0;
+  }
+}
+
