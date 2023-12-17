@@ -1,16 +1,23 @@
 {
+  "engines": {
+    "node": "16.19.1"
+  },
   "name": "team9-hackathon-december",
   "version": "1.0.0",
-  "description": "# Description",
-  "main": "script.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "node script.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": " ",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpetrauskas92/team9-hackathon-december/issues"
+  },
+  "homepage": " ",
   "dependencies": {
+    "express": "^4.17.1",
     "open": "^9.1.0"
   }
 }

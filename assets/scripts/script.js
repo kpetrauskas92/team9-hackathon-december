@@ -1,6 +1,61 @@
 const PLAYURL = 'play.js'
 const IMAGE_CARD_URL = 'assets/images/options/'
 const SOUND_CARD_URL = 'assets/sounds/'
+const examplesText = [
+  'Wishing you a Christmas filled with laughter and joy, dear friend. May your holidays sparkle with moments of love and happiness!',
+  'Friends like you make the season bright. Merry Christmas with all my heart!',
+  'To a special friend, may your Christmas be merry and your New Year be bright!',
+  'Cheers to the wonderful friendship we share! Wishing you a delightful Christmas!',
+  'May your Christmas be wrapped in happiness and tied with love. Happy Holidays, my friend!',
+
+  'To my wonderful family, may our home be filled with love and our hearts with joy this Christmas.',
+  'Merry Christmas to my family, the greatest gift of all. Love and joy to you all.',
+  'Family is the true spirit of Christmas, and you make mine complete. Warm wishes to you!',
+  'Blessed to spend another Christmas with the most precious family. Love you all!',
+  'May our family Christmas be filled with laughter, love, and cheer. Merry Christmas!',
+
+  'This Christmas, may your family be functional and all your batteries be included. Merry Christmas!',
+  'Remember, Santa is watching. It\u2019s not too late to be good\u2026or at least good at pretending!',
+  'Eat. Drink. Be Merry. Have a wonderfully overindulgent Christmas!',
+  'May your Christmas be filled with joyful noise and lots of presents. But mostly presents.',
+  'This year, I decided to put mistletoe in my back pocket so all the people I don\u2019t like can kiss my\u2026',
+
+  'Ah, Christmas: A time for joy, love, and pretending to like the gifts. Enjoy!',
+  'Merry Christmas! Here\u2019s to a day of awkward family interactions and overeating.',
+  'Ho Ho Hope you find more happiness this Christmas than in the Christmas bonus you didn\u2019t get.',
+  'Wishing you a Merry Christmas and a \u2018new year, new me\u2019 that actually lasts.',
+  'Christmas: the only time of year you can sit in front of a dead tree eating candy out of socks. Enjoy!',
+]
+
+const examplesImages = [
+  'christmas-card-1843552_1280.jpg',
+  'christmas-tree-2928142_1280.jpg',
+  'red-2892235_1280.jpg',
+  'wood-1776060_1280.jpg',
+  'christmas-1869902_1280.jpg',
+  'christmas-2933008_1280.jpg',
+  'christmas-3009949_1280.jpg',
+  'christmas-3026685_1280.jpg',
+  'christmas-3735928_1280.jpg',
+  'christmas-3864552_1280.jpg',
+  'christmas-tree-574742_1280_yellow.jpg',
+  'church-648430_1280.jpg',
+  'moon-31665_1280.jpg',
+  'north-star-2869817_1280.jpg',
+  'snowman-321034_1280.jpg',
+]
+
+const initCard = () => {
+  // Add a random background image from the "assets" folder
+  const randomImage =
+    examplesImages[Math.floor(Math.random() * examplesImages.length)]
+
+  document.getElementById('imageCard').src = IMAGE_CARD_URL + randomImage
+  // Add a random text from the "examplesText" array
+  const randomText =
+    examplesText[Math.floor(Math.random() * examplesText.length)]
+  document.getElementById('cardText').value = randomText
+}
 
 const updateURL = () => {
   let url = `${PLAYURL}?`
@@ -200,5 +255,6 @@ addEventListener('DOMContentLoaded', function () {
   })
 })
 
+initCard()
 updateCardText()
 updateURL()

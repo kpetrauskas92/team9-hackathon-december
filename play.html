@@ -2,19 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/0199d382d0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="assets/styles.css" />
-    <title>Card Play</title>
+    <script src="assets/scripts/pure-snow.js" defer></script>
+
+    <title>The North Pole Nodes</title>
   </head>
+
   <body>
+    <!-- Snow JS -->
+    <div id="snow" data-count="200"></div>
+
     <!-- Main Content Section -->
-    <div class="container main-container">
+    <div class="container main-container h-100 w-100 pt-2 h-100 w-100 pt-2">
       <!-- Image Options -->
-      <div class="image-container">
+      <div class="image-container mt-5">
         <!-- Youtube Video Container -->
         <div id="video-background" class="video-background element-hidden">
           <div class="video-foreground">
@@ -45,12 +74,10 @@
           <div class="text-overlay" id="text-inside-card">
             <p id="text-inside-card" class="text-overlay-text"></p>
           </div>
-          <div class="sound-container">
-            <br />
+          <div class="sound-container mt-5 text-center">
             <audio controls id="soundCard">
               <source src="" type="audio/mp3" />
             </audio>
-            <br />
           </div>
         </div>
       </div>
@@ -219,6 +246,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/scripts/script.js"></script>
   </body>
 </html>
