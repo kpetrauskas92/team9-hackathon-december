@@ -11,8 +11,15 @@
 					crossorigin="anonymous"
 		>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+    	<script src="https://kit.fontawesome.com/0199d382d0.js" crossorigin="anonymous"></script>
+
+
 		<!-- Link to the external CSS file -->
-		<link rel="stylesheet" href="assets/styles.css">
+		<link rel="stylesheet" href="assets/styles1.css">
 		<script src="assets/scripts/pure-snow.js" defer></script>
 
 		<title>The North Pole Nodes</title>
@@ -20,6 +27,7 @@
 
 	<body>
 		<div id="snow" data-count="200"></div>
+
 		<nav class="nav-container py-2 px-4">
 			<a href="index.html" class="nav-link">Home</a>
 		
@@ -27,7 +35,7 @@
 				<img src="assets/images/logo/logo.png" alt="Logo" class="logo">
 			</a>
 		
-			<a href="about.html" class="nav-link">About</a>
+			<a href="about-us.html" class="nav-link">About</a>
 		</nav>
 		
 		
@@ -41,20 +49,6 @@
 		<!-- Main Content Section -->
 		<div class="container main-container h-100 pt-2 ">
 
-<<<<<<< HEAD
-          <div class="image-container">
-            <img
-              src="assets/images/options/christmas-card-1843552_1280.jpg"
-              alt="Selected Image"
-              class="img-fluid mt-2"
-              id="imageCard"
-            />
-            <div class="text-overlay" id="text-inside-card" >
-              
-            </div>
-          </div>
-        </div>
-=======
 			<!-- Left Section -->
 			<div class="left-section p-4 bg-white rounded-2 shadow-lg">
 				<!-- Choose Image Section -->
@@ -62,15 +56,25 @@
 					<label for="imageSelect">Choose Image:</label>
 					<select name="imageopt" id="imageSelect" class="form-control">
 						<option value="christmas-card-1843552_1280.jpg">
-							Christmas Card
+						  Christmas Card
 						</option>
 						<option value="christmas-tree-2928142_1280.jpg">
-							Christmas tree
+						  Christmas tree
 						</option>
 						<option value="red-2892235_1280.jpg">Christmas tree red</option>
 						<option value="wood-1776060_1280.jpg">Apple</option>
-					</select>
->>>>>>> e82e2d8 (updated ux/ui for index)
+						<option value="christmas-1869902_1280.jpg">Christmas Tree with Gift</option>
+						<option value="christmas-2933008_1280.jpg">Christmas Blue Tree</option>
+						<option value="christmas-3009949_1280.jpg">Pink</option>
+						<option value="christmas-3026685_1280.jpg">Gifts</option>
+						<option value="christmas-3735928_1280.jpg">Yellow Tree with Red Page</option>
+						<option value="christmas-3864552_1280.jpg">Snow</option>
+						<option value="christmas-tree-574742_1280_yellow.jpg">Christmas Yellow Tree</option>
+						<option value="church-648430_1280.jpg">Church</option>
+						<option value="moon-31665_1280.jpg">Moon</option>
+						<option value="north-star-2869817_1280.jpg">North Star</option>
+						<option value="snowman-321034_1280.jpg">Snowman</option>
+					  </select>
 
 					<input
 						type="text"
@@ -117,6 +121,7 @@
 					</div>
 				</div>
 
+
 				<!-- Debug URL -->
 				<div class="row mt-3">
 					<div class="col col-md-12">
@@ -131,54 +136,42 @@
 				</div>
 			</div>
 
-<<<<<<< HEAD
-        <!-- Audio Section -->
-        <div class="audio-section">
-          <label>Audio Preview:</label>
-          <div id="audioPreview">
-            <audio controls id="audioPlayer">
-                <!-- The source of the audio file will be set dynamically using JavaScript -->
-                <source
-                  id="soundSource"
-                  src="assets/sounds/enchanted-chimes-177906.mp3"
-                  type="audio/mp3"
-                />
-                Your browser does not support the audio tag.
-              </audio>
-          </div>
-        </div>
-=======
 			<!-- Right Section -->
 			<div class="right-section p-4 bg-white rounded-2">
 				<!-- Choose Sound Section -->
 				<div class="choose-sound">
 					<label for="soundSelect">Choose Sound:</label>
 					<select name="sound" id="soundSelect" class="form-control">
-						<!-- Add options here -->
-						<option value="enchanted-chimes-177906.mp3">Sound 1</option>
-						<option
-							value="carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3"
-						>
-							Sound 2
-						</option>
-						<option value="jingle-family-174542.mp3">Sound 3</option>
-						<option value="joyful-snowman_60sec-176773.mp3">Sound 4</option>
-						<option
-							value="we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3"
-						>
-							Sound 5
-						</option>
-						<!-- Add more options as needed -->
+
+					  <!-- Add options here -->
+					  <option value="enchanted-chimes-177906.mp3">Sound 1</option>
+					  <option
+						value="carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3"
+					  >
+						Sound 2
+					  </option>
+					  <option value="jingle-family-174542.mp3">Sound 3</option>
+					  <option value="joyful-snowman_60sec-176773.mp3">Sound 4</option>
+					  <option
+						value="we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3"
+					  >
+						Sound 5
+					  </option>
+					  <option value="christmas-holidays_30sec-172989.mp3">Sound 6</option>
+					  <option value="christmas-holidays_medium-172984.mp3">Sound 7</option>
+					  <option value="happy-santa_32sec_1-175539.mp3">Sound 8</option>
+					  <option value="rock-n-christmas_medium-177549.mp3">Sound 9</option>
+					  <option value="we-wish-you-a-merry-christmas_40sec-174157.mp3">Sound 10</option>
+					  <!-- Add more options as needed -->
 					</select>
 					<input
-						type="text"
-						name="soundurl"
-						id="soundurl"
-						class="form-control element-hidden"
-						placeholder="Sound URL"
+					  type="text"
+					  name="soundurl"
+					  id="soundurl"
+					  class="form-control element-hidden"
+					  placeholder="Sound URL"
 					/>
-				</div>
->>>>>>> e82e2d8 (updated ux/ui for index)
+				  </div>
 
 				<!-- Audio Section -->
 				<div class="audio-section py-2">
@@ -202,6 +195,18 @@
 					>
 				</div>
 
+
+          <input class="m-1" type="text" id="shareLink" readonly>
+      </section>
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2023 Copyright:
+              <a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
+          </div>
+
+          <a id="about-us" href="about-us.html" aria-label="Visit the About Us page"> About Us </a>
+  </footer>
+
 				<div class="Video">
 					<label for="videoUrl">Video URL:</label>
 					<input
@@ -212,6 +217,7 @@
 						placeholder="http://www.youtube.com/embed/VIDEO_ID"
 					/>
 				</div>
+
 
 				<div class="options-configuration">
 					<input type="radio" name="tpos" id="tpos1" value="top" checked />
@@ -267,12 +273,6 @@
 							</i>
 						</a>
 				
-						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://youtube.com" target="_blank"
-							rel="noopener" aria-label="Share on YouTube">
-							<i class="fab fa-youtube-square">
-							</i>
-						</a>
-				
 						<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
 							rel="noopener" aria-label="Share on Instagram">
 							<i class="fab fa-instagram">
@@ -325,10 +325,12 @@
 					}
 			</script>
 
-		<!-- Bootstrap JS (optional) -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<script src="assets/scripts/script.js"></script>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
 	</body>
+
 </html>
