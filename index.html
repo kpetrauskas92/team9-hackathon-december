@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <!-- Link to the external CSS file -->
-    <title>The North Pole Nodes</title>
-  </head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		>
 
-  <body>
-    <!-- Logo Section -->
-    <!-- 
-    <div class="container">
-      <img src="" alt="Logo" class="logo" />
-    </div>
-     -->
+		<!-- Bootstrap 5 -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+		<!-- Font Awesome -->
+    	<script src="https://kit.fontawesome.com/0199d382d0.js" crossorigin="anonymous"></script>
+
+
+		<!-- Link to the external CSS file -->
+		<link rel="stylesheet" href="assets/styles.css">
+		<script src="assets/scripts/pure-snow.js" defer></script>
+
+		<title>The North Pole Nodes</title>
+	</head>
+
+	<body>
+		<!-- Snow JS -->
+		<div id="snow" data-count="200"></div>
+
+		<!-- Nav section -->
+		<nav class="nav-container py-2 px-4">
+			<a href="index.html" class="nav-link">Home</a>
+		
+			<a href="index.html" class="nav-logo">
+				<img src="assets/images/logo/logo.png" alt="Logo" class="logo">
+			</a>
+		
+			<a href="about-us.html" class="nav-link">About</a>
+		</nav>
+
+		<!-- Main Content Section -->
+		<div class="container main-container h-100 w-100 pt-2 ">
+
+			<!-- Heading-->
+			<div class="pt-2 text-center">
+				<div class="py-4">
+					<h1>Create a personalised and interactive christmas greetings card</h1>
+				</div>
+			</div>
+
+			<!-- Image Container-->
+			<div class="container mb-2">
+				<div class="image-container bg-white">
+					<img
+						src="assets/images/options/christmas-card-1843552_1280.jpg"
+						alt="Selected Image"
+						class="img-fluid"
+						id="imageCard"
+					>
+					<div class="text-overlay">
+						<p id="text-inside-card" class="text-overlay-text"></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Button to trigger collapse -->
+			<div class="container">
+				<button class="customize-button w-100" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSection" aria-expanded="false" aria-controls="collapseSection">
+					Customize This Card
+				</button>
+			</div>
+
+			<div class="container collapse mt-2" id="collapseSection">
+
+				<div class="p-4 bg-white rounded-2 shadow-lg">
+
+					<!-- Write Text Section -->
+					<div class="write-text">
+						<i class="fa-solid fa-pencil"></i>
+						<label for="cardText">Custom Text:</label>
+						<textarea name="ctext" id="cardText" class="form-control" rows="2">
+Enter your text...
+						</textarea>
+					</div>
 
     <!-- Main Content Section -->
     <div class="container main-container">
@@ -40,61 +106,94 @@
             </option>
             <option value="red-2892235_1280.jpg">Christmas tree red</option>
             <option value="wood-1776060_1280.jpg">Apple</option>
-            <option value="christmas-1869902_1280.jpg">Christmas Tree with Gift</option>
-            <option value="christmas-2933008_1280.jpg">Christmas Blue Tree</option>
-            <option value="christmas-3009949_1280.jpg">Pink</option>
-            <option value="christmas-3026685_1280.jpg">Gifts</option>
-            <option value="christmas-3735928_1280.jpg">Yellow Tree with Red Page</option>
-            <option value="christmas-3864552_1280.jpg">Snow</option>
-            <option value="christmas-tree-574742_1280_yellow.jpg">Christmas Yellow Tree</option>
-            <option value="church-648430_1280.jpg">Church</option>
-            <option value="moon-31665_1280.jpg">Moon</option>
-            <option value="north-star-2869817_1280.jpg">North Star</option>
-            <option value="snowman-321034_1280.jpg">Snowman</option>
           </select>
 
-          <input
-            type="text"
-            name="imageurl"
-            id="imageurl"
-            class="form-control element-hidden"
-            placeholder="Image URL"
-          />
+						<input
+							type="text"
+							name="imageurl"
+							id="imageurl"
+							class="form-control element-hidden"
+							placeholder="Image URL"
+						>
+					</div>
 
-          <div class="image-container">
-            <img
-              src="assets/images/options/christmas-card-1843552_1280.jpg"
-              alt="Selected Image"
-              class="img-fluid mt-2"
-              id="imageCard"
-            />
-            <div class="text-overlay">
-              <p id="text-inside-card" class="text-overlay-text"></p>
-            </div>
-          </div>
-        </div>
+					<div class="Video pt-4">
+						<i class="fa-brands fa-youtube"></i>
+						<label for="videoUrl">Youtube URL:</label>
+						<input
+							name="video"
+							id="videoUrl"
+							class="form-control"
+							rows="2"
+							placeholder="http://www.youtube.com/embed/video_id"
+						>
+					</div>
 
-        <!-- Sender and Receiver Names Section -->
-        <div class="form-row mt-3">
-          <div class="form-group col-md-6">
-            <label for="senderName">Sender Name:</label>
-            <input
-              name="sname"
-              type="text"
-              class="form-control"
-              id="senderName"
-            />
-          </div>
-          <div class="form-group col-md-6">
-            <label for="receiverName">Receiver Name:</label>
-            <input
-              name="rname"
-              type="text"
-              class="form-control"
-              id="receiverName"
-            />
-          </div>
-        </div>
+
+					<!-- Choose Sound Section -->
+					<div class="choose-sound pt-4">
+						<i class="fa-solid fa-music"></i>
+						<label for="soundSelect">Select Audio:</label>
+						<select name="sound" id="soundSelect" class="form-control">
+
+							<!-- Add options here -->
+							<option value="enchanted-chimes-177906.mp3">
+								Sound 1
+							</option>
+							<option value="carol-of-the-bells-xmas-background-hip-hop-music-for-video-60-second-178242.mp3">
+								Sound 2
+							</option>
+							<option value="jingle-family-174542.mp3">
+								Sound 3
+							</option>
+							<option value="joyful-snowman_60sec-176773.mp3">
+								Sound 4
+							</option>
+							<option value="we-wish-you-a-merry-christmas-xmas-background-short-music-30-second-178228.mp3">
+								Sound 5
+							</option>
+							<option value="christmas-holidays_30sec-172989.mp3">
+								Sound 6
+							</option>
+							<option value="christmas-holidays_medium-172984.mp3">
+								Sound 7
+							</option>
+							<option value="happy-santa_32sec_1-175539.mp3">
+								Sound 8
+							</option>
+							<option value="rock-n-christmas_medium-177549.mp3">
+								Sound 9
+							</option>
+							<option value="we-wish-you-a-merry-christmas_40sec-174157.mp3">
+								Sound 10
+							</option>
+						</select>
+
+						<input
+							type="text"
+							name="soundurl"
+							id="soundurl"
+							class="form-control element-hidden"
+							placeholder="Sound URL"
+						>
+					</div>
+
+					<!-- Audio Section -->
+					<div class="audio-section py-2">
+						<i class="fa-solid fa-play"></i>
+						<label>Audio Preview:</label>
+						<div>
+							<audio class="rounded-2 bg-warning w-100" controls id="audioPlayer">
+								<!-- The source of the audio file will be set dynamically using JavaScript -->
+								<source
+									id="soundSource"
+									src="assets/sounds/enchanted-chimes-177906.mp3"
+									type="audio/mp3"
+								>
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
 
         <!-- Debug URL -->
         <div class="row mt-3">
@@ -130,11 +229,6 @@
             >
               Sound 5
             </option>
-            <option value="christmas-holidays_30sec-172989.mp3">Sound 6</option>
-            <option value="christmas-holidays_medium-172984.mp3">Sound 7</option>
-            <option value="happy-santa_32sec_1-175539.mp3">Sound 8</option>
-            <option value="rock-n-christmas_medium-177549.mp3">Sound 9</option>
-            <option value="we-wish-you-a-merry-christmas_40sec-174157.mp3">Sound 10</option>
             <!-- Add more options as needed -->
           </select>
           <input
@@ -189,111 +283,148 @@ Merry Christmas</textarea
           [Text Position]
         </div>
 
-        <div class="options-configuration">
-          <input
-            type="radio"
-            name="imagesrc"
-            id="imagesrc1"
-            value="internal"
-            checked
-          />
-          <label for="imagesrc1">internal</label>
-          <input type="radio" name="imagesrc" id="imagesrc2" value="external" />
-          <label for="imagesrc2">external</label>
-          [Image Source]
-        </div>
-        <div class="options-configuration">
-          <input
-            type="radio"
-            name="soundsrc"
-            id="soundsrc2"
-            value="internal"
-            checked
-          />
-          <label for="soundsrc1">internal</label>
-          <input type="radio" name="soundsrc" id="soundsrc2" value="external" />
-          <label for="soundsrc2">external</label>
-          [Sound Source]
-        </div>
+					<div class="options-configuration">
+						<input
+							type="radio"
+							name="imagesrc"
+							id="imagesrc1"
+							value="internal"
+							checked
+						>
+						<label for="imagesrc1">internal</label>
+						<input type="radio" name="imagesrc" id="imagesrc2" value="external" />
+						<label for="imagesrc2">external</label>
+						[Image Source]
+					</div>
+					<div class="options-configuration">
+						<input
+							type="radio"
+							name="soundsrc"
+							id="soundsrc2"
+							value="internal"
+							checked
+						>
+						<label for="soundsrc1">internal</label>
+						<input type="radio" name="soundsrc" id="soundsrc2" value="external" />
+						<label for="soundsrc2">external</label>
+						[Sound Source]
+					</div>
+				</div>
+			</div>
 
-        <!-- Social Network Icons Section -->
-        <div class="social-icons">
-          <!-- Add your social network icons here -->
-        </div>
-      </div>
-    </div>
+			<!-- Share Card Section -->
+			<div class="container">
+				<div class="px-4 pt-4 mt-2 bg-white rounded-2">
 
-        <!-- Footer Section -->
-        <footer class="text-center text-lg-start text-white" style="background-color: #640404">
-          <section class="mb-4 text-center social-links">
-              <p>Share this interactive card:</p>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://facebook.com" target="_blank"
-                  rel="noopener" aria-label="Share on Facebook">
-                  <i class="fab fa-facebook">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com" target="_blank"
-                  rel="noopener" aria-label="Share on Twitter">
-                  <i class="fab fa-twitter-square">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://youtube.com" target="_blank"
-                  rel="noopener" aria-label="Share on YouTube">
-                  <i class="fab fa-youtube-square">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
-                  rel="noopener" aria-label="Share on Instagram">
-                  <i class="fab fa-instagram">
-                  </i>
-              </a>
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://wa.me" target="_blank"
-                  rel="noopener" aria-label="Share on WhatsApp">
-                  <i class="fa-brands fa-whatsapp">
-                  </i>
-              </a>
-    
-              <a class="btn btn-outline-light btn-floating m-1" role="button" href="#"
-                  onclick="copyLink('https://team9hackathon.com/interactive-card')" aria-label="Copy Link to Share">
-                  <i class="fa-solid fa-link">
-                  </i>
-              </a>
-    
-              <input class="m-1" type="text" id="shareLink" readonly>
-          </section>
-              <!-- Copyright -->
-              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                  © 2023 Copyright:
-                  <a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
-              </div>
-      </footer>
-    
-      <!-- script for footer section (copy link)-->
-      <script>
-    
-          function copyLink(link) {
-              var copyText = document.getElementById("shareLink");
-              copyText.value = link;
-    
-              /* Select the text field */
-              copyText.select();
-              copyText.setSelectionRange(0, 99999); /* For mobile devices */
-    
-              /* Copy the text inside the text field */
-              document.execCommand("copy");
-    
-              /* Alert the copied text */
-              alert("Copied the link to share: " + copyText.value);
-          }
-      </script>
+					<!--
+					<div class="options-configuration">
+						<input type="radio" name="tpos" id="tpos1" value="top" checked />
+						<label for="tpos1">top</label>
+						<input type="radio" name="tpos" id="tpos2" value="middle" />
+						<label for="tpos2">middle</label>
+						<input type="radio" name="tpos" id="tpos3" value="bottom" />
+						<label for="tpos3">bottom</label>
+						[Text Position]
+					</div>
+					-->
 
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/scripts/script.js"></script>
+					<!-- Sender and Receiver Names Section -->
+					<div class="form-row mt-3">
+						<div class="form-group col-md-6 w-100">
+							<i class="fa-solid fa-user"></i>
+							<label for="senderName">Your Name:</label>
+							<input
+								name="sname"
+								type="text"
+								class="form-control"
+								id="senderName"
+							>
+						</div>
+						<div class="pt-4 form-group col-md-6 w-100">
+							<i class="fa-regular fa-envelope"></i>
+							<label for="receiverName">Receiver Name:</label>
+							<input
+								name="rname"
+								type="text"
+								class="form-control"
+								id="receiverName"
+							>
+						</div>
+					</div>
+
+					<!-- Social Network Icons Section -->
+					<div class="social-icons p-2 rounded-2">
+						<section class="mb-4 text-center fw-bold social-links">
+							<p>Share this christmas greetings card:</p>
+					
+							<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://facebook.com" target="_blank"
+								rel="noopener" aria-label="Share on Facebook">
+								<i class="fab fa-facebook">
+								</i>
+							</a>
+					
+							<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com" target="_blank"
+								rel="noopener" aria-label="Share on Twitter">
+								<i class="fab fa-twitter-square">
+								</i>
+							</a>
+					
+							<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://instagram.com" target="_blank"
+								rel="noopener" aria-label="Share on Instagram">
+								<i class="fab fa-instagram">
+								</i>
+							</a>
+							<a class="btn btn-outline-light btn-floating m-1" role="button" href="https://wa.me" target="_blank"
+								rel="noopener" aria-label="Share on WhatsApp">
+								<i class="fa-brands fa-whatsapp">
+								</i>
+							</a>
+					
+							<a class="btn btn-outline-light btn-floating m-1" role="button" href="#"
+								onclick="copyLink('https://team9hackathon.com/interactive-card')" aria-label="Copy Link to Share">
+								<i class="fa-solid fa-link">
+								</i>
+							</a>
+							<p>Shareable URL:</p>
+							<input class="" type="text" id="shareLink" readonly>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer Section -->
+		<footer class="text-center text-lg-start text-white" style="background-color: #980505">
+
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+					© 2023 Copyright:
+					<a class="text-white" href="https://github.com/kpetrauskas92/team9-hackathon-december">The North Pole Nodes</a>
+			</div>
+		</footer>
+		
+			<!-- script for footer section (copy link)-->
+			<script>
+		
+					function copyLink(link) {
+							var copyText = document.getElementById("shareLink");
+							copyText.value = link;
+		
+							/* Select the text field */
+							copyText.select();
+							copyText.setSelectionRange(0, 99999); /* For mobile devices */
+		
+							/* Copy the text inside the text field */
+							document.execCommand("copy");
+		
+							/* Alert the copied text */
+							alert("Copied the link to share: " + copyText.value);
+					}
+			</script>
+
+		<!-- Bootstrap JS (optional) -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="assets/scripts/script.js"></script>
+	</body>
+
 </html>
