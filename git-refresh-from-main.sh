@@ -5,3 +5,4 @@ git checkout main
 git fetch originalsource
 git reset --hard originalsource/main
 # git push -f originalsource main
+# git push --set-upstream team9 armando-update2
