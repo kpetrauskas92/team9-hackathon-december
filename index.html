@@ -393,6 +393,16 @@ Enter your text...
                 class="btn btn-outline-light btn-floating m-1"
                 role="button"
                 href="#"
+                onclick="let email = encodeURIComponent(document.getElementById('shareLink').value); window.open('mailto:?subject=Christmas Greetings Card&body=Check out this Christmas Greetings Card: '+email,'_blank' )"
+                aria-label="Preview Card"
+              >
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                role="button"
+                href="#"
                 onclick="preview()"
                 aria-label="Preview Card"
               >
