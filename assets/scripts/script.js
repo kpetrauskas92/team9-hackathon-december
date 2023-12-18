@@ -1,4 +1,4 @@
-const PLAYURL = 'play.js'
+const PLAYURL = 'v'
 const IMAGE_CARD_URL = 'assets/images/options/'
 const SOUND_CARD_URL = 'assets/sounds/'
 const examplesText = [
@@ -47,24 +47,38 @@ const examplesImages = [
 
 const initCard = () => {
   // Add a random background image from the "assets" folder
-  const randomImage =
-    examplesImages[Math.floor(Math.random() * examplesImages.length)]
+  const posImage = Math.floor(Math.random() * examplesImages.length)
+  const randomImage = examplesImages[posImage]
+  const selectElement = document.getElementById('imageSelect')
+  selectElement.selectedIndex = posImage
+  showSelectedImage()
+  // document.getElementById('imageCard').src = IMAGE_CARD_URL + randomImage
 
-  document.getElementById('imageCard').src = IMAGE_CARD_URL + randomImage
   // Add a random text from the "examplesText" array
   const randomText =
     examplesText[Math.floor(Math.random() * examplesText.length)]
   document.getElementById('cardText').value = randomText
+  updateURL()
+}
+
+const urlEncode = (data) => {
+  return Object.keys(data)
+    .map(function (key) {
+      return [key, data[key]].map(encodeURIComponent).join('=')
+    })
+    .join('&')
 }
 
 const updateURL = () => {
   let url = `${PLAYURL}?`
+  const urlParamsObject = {}
 
   const elementsInput = document.querySelectorAll('.form-control')
   elementsInput.forEach(function (element) {
     if (element.value !== '' && element.name !== '') {
       // console.log(element.name, '=', element.value)
-      url += `${element.name}=${element.value}&`
+      urlParamsObject[element.name] = element.value
+      // url += `${element.name}=${element.value}&`
     }
   })
 
@@ -72,15 +86,66 @@ const updateURL = () => {
   radioButtons.forEach(function (radioButton) {
     if (radioButton.value !== '' && radioButton.name !== '') {
       // console.log(radioButton.name, '=', radioButton.value)
-      url += `${radioButton.name}=${radioButton.value}&`
+      // url += `${radioButton.name}=${radioButton.value}&`
+      urlParamsObject[radioButton.name] = radioButton.value
     }
   })
 
   // Remove the last "&" character
-  url = url.slice(0, -1)
+  // url = url.slice(0, -1)
 
-  document.getElementById('debugURL').value = url
+  let domainURL = window.location.href.replace('#', '')
+  domainURL = domainURL.split('?')[0]
+  url = domainURL + PLAYURL + '?' + urlEncode(urlParamsObject)
+
+  document.getElementById('shareLink').value = url
   return url
+}
+
+function updateTextPosition() {
+  // Get the selected text position
+  var selectedPosition = document.querySelector(
+    'input[name="tpos"]:checked'
+  ).value
+  // Get the text overlay element
+  var textOverlay = document.querySelector('.text-overlay')
+
+  // Apply new styles based on the selected position
+  switch (selectedPosition) {
+    case 'top':
+      textOverlay.style.position = 'absolute'
+      textOverlay.style.top = '30%'
+      break
+    case 'middle':
+      textOverlay.style.position = 'absolute'
+      textOverlay.style.top = '60%'
+      textOverlay.style.transform = 'translateY(-50%)' // Center vertically
+      break
+    case 'bottom':
+      textOverlay.style.position = 'absolute'
+      textOverlay.style.top = '85%' // You may adjust the default bottom position
+      break
+  }
+}
+
+function copyLink(link) {
+  var copyText = document.getElementById('shareLink')
+  //copyText.value = link
+
+  /* Select the text field */
+  copyText.select()
+  copyText.setSelectionRange(0, 99999) /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand('copy')
+
+  /* Alert the copied text */
+  alert('Copied the link to share!!!')
+}
+
+function preview() {
+  var copyText = document.getElementById('shareLink')
+  window.open(copyText.value, '_blank')
 }
 
 function showSelectedImage() {
@@ -152,8 +217,8 @@ function playSoundSelected() {
     // const selectedValue = document.getElementById('soundurl').value
     // document.getElementById('audioPlayer').src = selectedValue
     const audioPlayer = document.getElementById('audioPlayer')
-    alert(selectedValue)
-    audioPlayer.type = 'audio/mpeg'
+    // alert(selectedValue)
+    // audioPlayer.type = 'audio/mpeg'
     audioPlayer.src = selectedValue
     audioPlayer.load()
     audioPlayer.play()
@@ -182,7 +247,6 @@ function openCard() {
 }
 
 const updateCardText = () => {
-  // 20 lines max
   const cardText = document.getElementById('cardText').value
   let cardTextLines = ''
   // text-overlay-text
@@ -190,16 +254,6 @@ const updateCardText = () => {
     cardTextLines += `<span class="text-overlay-text">${line}</span><br>`
   })
   document.getElementById('text-inside-card').innerHTML = cardTextLines
-
-  const cantLines = cardText.split('\n').length
-
-  let textOverlayElement = document.getElementsByClassName('text-overlay')
-  console.log(textOverlayElement, `${30 * cantLines} px`)
-  textOverlayElement[0].style.height = `${30 * cantLines} px`
-
-  const a = $('.text-overlay')
-  console.log(a)
-  a.css('height', `${30 * cantLines} px`)
 }
 
 addEventListener('DOMContentLoaded', function () {
@@ -229,6 +283,13 @@ addEventListener('DOMContentLoaded', function () {
   const soundurl = document.getElementById('soundurl')
   soundurl.addEventListener('change', playSoundSelected)
 
+  const textPosition = document.getElementsByName('tpos')
+  textPosition.forEach(function (element) {
+    element.addEventListener('change', function () {
+      updateTextPosition()
+    })
+  })
+
   const soundSource = document.getElementsByName('soundsrc')
   soundSource.forEach(function (element) {
     element.addEventListener('change', function () {
@@ -257,4 +318,3 @@ addEventListener('DOMContentLoaded', function () {
 
 initCard()
 updateCardText()
-updateURL()
