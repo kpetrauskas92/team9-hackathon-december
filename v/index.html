@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/0199d382d0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/scripts/pure-snow.js" defer></script>
+
+    <title>The North Pole Nodes</title>
+  </head>
+
+  <body>
+    <!-- Snow JS -->
+    <div id="snow" data-count="200"></div>
+
+    <!-- Main Content Section -->
+    <div class="container main-container h-100 w-100 pt-2">
+      <!-- Image Options -->
+      <div class="container mb-2">
+        <!-- Youtube Video Container -->
+        <div
+          id="video-background"
+          class="video-background text-center element-hidden"
+        >
+          <div class="video-foreground">
+            <iframe
+              id="videoCard"
+              width="100%"
+              height="400px"
+              title=""
+              src=""
+              frameborder="0"
+              allow="autoplay"
+              autoplay="1"
+              frameborder="0"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Container-->
+      <div class="container mb-2">
+        <div
+          id="image-background"
+          class="image-container bg-white element-hidden"
+        >
+          <img src="" alt="Selected Image" class="img-fluid" id="imageCard" />
+          <div class="text-overlay" id="text-inside-card">
+            <p id="text-inside-card" class="text-overlay-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sound-container mt-5 text-center">
+        <audio controls id="soundCard" class="element-hidden">
+          <source src="" type="audio/mp3" />
+        </audio>
+      </div>
+
+      <div id="params-container"></div>
+    </div>
+
+    <script>
+      // Function to retrieve URL parameters
+      // play.js?imageopt=christmas-tree-2928142_1280.jpg&sname=Robert&rname=Petra&sound=enchanted-chimes-177906.mp3&ctext=Merry%20Christmas%0A1%0A2%0A3&video=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DaAkMkVFwAoo%26ab_channel%3DMariahCareyVEVO&tpos=top&imagesrc=internal&soundsrc=internal
+      // external sound example: http://51340200.swh.strato-hosting.eu/enchanted-chimes.mp3
+
+      const IMAGE_URL = '../assets/images/options/'
+      const SOUND_URL = '../assets/sounds/'
+      let paramsObj = {}
+
+      const updateCardWithText = (cardText) => {
+        let cardTextLines = ''
+        // text-overlay-text
+        cardText.split('\n').forEach(function (line, index) {
+          cardTextLines += `<span class="text-overlay-text">${line}</span><br>`
+        })
+        document.getElementById('text-inside-card').innerHTML = cardTextLines
+      }
+
+      function showCard() {
+        // Param tpos - top, middle or bottom of the text inside the card
+
+        //if (paramsObj.tpos === 'top') {
+        //  textOverlay.classList.add('text-overlay-top')
+        //} else if (paramsObj.tpos === 'middle') {
+        //  textOverlay.classList.add('text-overlay-middle')
+        //} else if (paramsObj.tpos === 'bottom') {
+        //  textOverlay.classList.add('text-overlay-bottom')
+        //}
+
+        const video = document.getElementById('video-background')
+        video.innerHTML = ''
+        video.classList.add('element-hidden')
+
+        if (paramsObj.tpos) {
+          const textOverlay = document.getElementById('text-inside-card')
+          switch (paramsObj.tpos) {
+            case 'top':
+              textOverlay.style.position = 'absolute'
+              textOverlay.style.top = '30%'
+              break
+            case 'middle':
+              textOverlay.style.position = 'absolute'
+              textOverlay.style.top = '60%'
+              textOverlay.style.transform = 'translateY(-50%)' // Center vertically
+              break
+            case 'bottom':
+              textOverlay.style.position = 'absolute'
+              textOverlay.style.top = '85%' // You may adjust the default bottom position
+              break
+          }
+        }
+
+        // Param imagesrc - internal or external
+        const image = document.getElementById('imageCard')
+        // Update the image source
+        if (paramsObj.imagesrc === 'external' && paramsObj.imageurl) {
+          image.src = paramsObj.imageurl
+        } else if (paramsObj.imagesrc === 'internal' && paramsObj.imageopt) {
+          image.src = IMAGE_URL + paramsObj.imageopt
+        }
+
+        // Update the image source
+        const imageContainer = document.getElementById('image-background')
+        imageContainer.classList.remove('element-hidden')
+
+        // Update the text inside the card
+        //const text = document.getElementById('text-inside-card')
+        //text.innerHTML = paramsObj.ctext.replace(/\n/g, '<br />')
+        updateCardWithText(paramsObj.ctext)
+
+        // Play the sound
+        if (paramsObj.sound) {
+          //var sound = new Audio('assets/sounds/' + paramsObj.sound)
+          const soundCard = document.getElementById('soundCard')
+          soundCard.classList.remove('element-hidden')
+          if (paramsObj.soundsrc === 'external' && paramsObj.soundurl) {
+            soundCard.src = paramsObj.soundurl
+          } else if (paramsObj.soundsrc === 'internal' && paramsObj.sound) {
+            soundCard.src = SOUND_URL + paramsObj.sound
+          }
+
+          soundCard.load()
+          soundCard.loop = true
+          soundCard.play()
+        }
+      }
+
+      function showVideo() {
+        // Update the video source
+        const videosrc = paramsObj.video // '&autoplay=1&mute=1&loop=1'
+        const youtubeParam = videosrc.split('v=')[1]
+        const youtubeId = youtubeParam.split('&')[0]
+
+        const video = document.getElementById('video-background')
+        video.innerHTML = `
+            <iframe
+            width="100%"
+            height="350px"
+            src="https://www.youtube.com/embed/${youtubeId}?si=KQN0habhnPnsxZ_l&amp;controls=1&autoplay=1&mute=1&loop=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+            </iframe>
+            <button onclick="showCard()">Show Card</button>
+            `
+
+        video.classList.remove('element-hidden')
+        // const videoCard = document.getElementById('videoCard')
+        // videoCard.src = paramsObj.video //+ '&autoplay=1&mute=1&loop=1&playlist='
+
+        // videoCard.load()
+        // videoCard.loop = true
+        //videoCard.play()
+      }
+
+      function processParameters() {
+        // Get the current URL
+        var url = window.location.href
+
+        // Find the question mark (?) in the URL
+        var index = url.indexOf('?')
+        if (index !== -1) {
+          // Get the query string after the question mark
+          var queryString = url.slice(index + 1)
+
+          // Split the query string into key-value pairs
+          var params = queryString.split('&')
+
+          // Object to store the parameters
+          // var paramsObj = {}
+
+          // Iterate over the key-value pairs and store them in the object
+          params.forEach(function (param) {
+            var pair = param.split('=')
+            var key = decodeURIComponent(pair[0])
+            var value = decodeURIComponent(pair[1] || '')
+            paramsObj[key] = value
+          })
+
+          // showParameters(paramsObj)
+
+          if (paramsObj.video) {
+            showVideo(paramsObj)
+          }
+
+          if (!paramsObj.video) {
+            showCard(paramsObj)
+          }
+        }
+      }
+
+      // Function to display the parameters in the container
+      function showParameters(params) {
+        var container = document.getElementById('params-container')
+
+        // Create an unordered list
+        var ul = document.createElement('ul')
+
+        // Iterate over the parameters and create list item elements
+        for (var key in params) {
+          if (params.hasOwnProperty(key)) {
+            var li = document.createElement('li')
+            li.textContent = key + ': ' + params[key]
+            ul.appendChild(li)
+          }
+        }
+
+        // Append the list to the container
+        container.appendChild(ul)
+      }
+
+      // Call the function to retrieve and display parameters when the page loads
+      processParameters()
+    </script>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
