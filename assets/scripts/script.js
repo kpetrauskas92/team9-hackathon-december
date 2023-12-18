@@ -85,18 +85,14 @@ const updateURL = () => {
   radioButtons = document.querySelectorAll('input[type=radio]:checked')
   radioButtons.forEach(function (radioButton) {
     if (radioButton.value !== '' && radioButton.name !== '') {
-      // console.log(radioButton.name, '=', radioButton.value)
-      // url += `${radioButton.name}=${radioButton.value}&`
       urlParamsObject[radioButton.name] = radioButton.value
     }
   })
 
-  // Remove the last "&" character
-  // url = url.slice(0, -1)
-
   let domainURL = window.location.href
     .replace('#', '')
     .replace('index.html', '')
+    .replace('edit.html', '')
   domainURL = domainURL.split('?')[0]
   url = domainURL + PLAYURL + '?' + urlEncode(urlParamsObject)
 
@@ -189,38 +185,7 @@ function playSoundSelected() {
   } else {
     const selectedValue = document.getElementById('soundurl').value
     const audioPreview = document.getElementById('audioPreview')
-    // if (selectedValue.includes('youtube')) {
-    //   audioPreview.innerHTML = `
-    //   <iframe
-    //         id="videoPlayer"
-    //         class="hidden"
-    //         width="460"
-    //         height="80"
-    //         src="${selectedValue}"
-    //         title=""
-    //         frameborder="0"
-    //         autoplay
-    //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    //         ></iframe>`
-    // } else {
-    //   audioPreview.innerHTML = `
-    //   <audio
-    //         id="audioPlayer"
-    //         class="hidden"
-    //         controls
-    //         autoplay
-    //         >
-    //         <source src="${selectedValue}" type="audio/mpeg">
-    //         Your browser does not support the audio element.
-    //   </audio>`
-    // }
-
-    // Get the selected option value
-    // const selectedValue = document.getElementById('soundurl').value
-    // document.getElementById('audioPlayer').src = selectedValue
     const audioPlayer = document.getElementById('audioPlayer')
-    // alert(selectedValue)
-    // audioPlayer.type = 'audio/mpeg'
     audioPlayer.src = selectedValue
     audioPlayer.load()
     audioPlayer.play()
