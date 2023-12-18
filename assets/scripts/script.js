@@ -94,7 +94,9 @@ const updateURL = () => {
   // Remove the last "&" character
   // url = url.slice(0, -1)
 
-  let domainURL = window.location.href.replace('#', '')
+  let domainURL = window.location.href
+    .replace('#', '')
+    .replace('index.html', '')
   domainURL = domainURL.split('?')[0]
   url = domainURL + PLAYURL + '?' + urlEncode(urlParamsObject)
 
