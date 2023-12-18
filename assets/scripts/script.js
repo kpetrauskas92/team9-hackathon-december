@@ -145,17 +145,15 @@ function updateTextPosition() {
 //   alert('Copied the link to share!!!')
 // }
 
-function copyLink() {
+function shareOnSocialMedia(platform) {
   var copyText = document.getElementById('shareLink').value;
-  var socialLinks = document.querySelectorAll('.social-links a');
+  var shareUrl = generateShareUrl(copyText, platform);
 
-  // Update href attribute for each social media link
-  socialLinks.forEach(function (link) {
-    var socialMedia = link.getAttribute('aria-label').replace('Share on ', '').toLowerCase();
-    var shareUrl = generateShareUrl(copyText, socialMedia);
-    link.href = shareUrl;
-  });
+  // Open a new window or tab for sharing on the specified social media platform
+  window.open(shareUrl, '_blank');
+}
 
+function copyLink() {
   // Select and copy the text field
   document.getElementById('shareLink').select();
   document.getElementById('shareLink').setSelectionRange(0, 99999);
