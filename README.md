@@ -257,6 +257,7 @@ Below is a full list of colors used and their usage:
 - [CSS Christmas Lights]().
 - Team logo design found at [redbubble](https://www.redbubble.com/i/kids-t-shirt/Node-JS-JavaScript-Ugly-Sweater-Christmas-by-vladocar/28588671.VXRIW).
 - [pixabay](https://pixabay.com/).
+- [ChatGPT 3.5](https://chat.openai.com/) was used for a number of aspects of the project, including testing, debugging and carrying out repetative tasks that would have been overly time consuming.
 - [PageSpeed Insights](https://pagespeed.web.dev/) was used to test the site's performance.
 
 
