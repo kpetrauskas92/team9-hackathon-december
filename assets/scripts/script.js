@@ -97,6 +97,7 @@ const updateURL = () => {
   let domainURL = window.location.href
     .replace('#', '')
     .replace('index.html', '')
+    .replace('edit.html', '')
   domainURL = domainURL.split('?')[0]
   url = domainURL + PLAYURL + '?' + urlEncode(urlParamsObject)
 

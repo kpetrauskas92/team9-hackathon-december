@@ -352,6 +352,7 @@ Enter your text...
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener"
+                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+decodeURIComponent(document.getElementById('shareLink').value),'_blank' )"
                 aria-label="Share on Facebook"
               >
                 <i class="fab fa-facebook"> </i>
@@ -363,6 +364,7 @@ Enter your text...
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener"
+                onclick="window.open('https://twitter.com/intent/tweet?text=Check out this Christmas Greetings Card: '+encodeURIComponent(document.getElementById('shareLink').value),'_blank' )"
                 aria-label="Share on Twitter"
               >
                 <i class="fab fa-twitter-square"> </i>
@@ -374,6 +376,7 @@ Enter your text...
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener"
+                onclick="window.open('https://www.instagram.com/?url='+decodeURIComponent(document.getElementById('shareLink').value),'_blank' )"
                 aria-label="Share on Instagram"
               >
                 <i class="fab fa-instagram"> </i>
@@ -384,6 +387,7 @@ Enter your text...
                 href="https://wa.me"
                 target="_blank"
                 rel="noopener"
+                onclick="window.open('https://api.whatsapp.com/send?text=Check out this Christmas Greetings Card: '+decodeURIComponent(document.getElementById('shareLink').value),'_blank' )"
                 aria-label="Share on WhatsApp"
               >
                 <i class="fa-brands fa-whatsapp"> </i>
