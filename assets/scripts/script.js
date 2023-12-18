@@ -130,46 +130,20 @@ function updateTextPosition() {
   }
 }
 
-// function copyLink(link) {
-//   var copyText = document.getElementById('shareLink')
-//   //copyText.value = link
+function copyLink(link) {
+  var copyText = document.getElementById('shareLink')
+  //copyText.value = link
 
-//   /* Select the text field */
-//   copyText.select()
-//   copyText.setSelectionRange(0, 99999) /* For mobile devices */
+  /* Select the text field */
+  copyText.select()
+  copyText.setSelectionRange(0, 99999) /* For mobile devices */
 
-//   /* Copy the text inside the text field */
-//   document.execCommand('copy')
+  /* Copy the text inside the text field */
+  document.execCommand('copy')
 
-//   /* Alert the copied text */
-//   alert('Copied the link to share!!!')
-// }
-
-function shareOnSocialMedia(platform) {
-  var copyText = document.getElementById('shareLink').value;
-  var shareUrl = generateShareUrl(copyText, platform);
-
-  // Open a new window or tab for sharing on the specified social media platform
-  window.open(shareUrl, '_blank');
+  /* Alert the copied text */
+  alert('Copied the link to share!!!')
 }
-
-function copyLink() {
-  // Select and copy the text field
-  document.getElementById('shareLink').select();
-  document.getElementById('shareLink').setSelectionRange(0, 99999);
-  document.execCommand('copy');
-
-  // Alert the copied text
-  alert('Copied the link to share!');
-}
-
-// Function to generate shareable URL based on social media platform
-function generateShareUrl(url, socialMedia) {
-  // Add logic to generate the shareable URL for each social media platform
-  // For simplicity, I'm assuming each social media platform supports appending the URL
-  return url + '&platform=' + socialMedia;
-}
-
 
 function preview() {
   var copyText = document.getElementById('shareLink')
@@ -343,6 +317,21 @@ addEventListener('DOMContentLoaded', function () {
     updateCardText()
   })
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+  var wireList = document.getElementById('wire');
+
+  // Calculate the number of <li> elements based on screen width
+  var screenWidth = window.innerWidth;
+  var numberOfLiElements = screenWidth < 600 ? 10 : 31;
+
+  // Generate <li> elements and append them to the <ul>
+  for (var i = 0; i < numberOfLiElements; i++) {
+    var liElement = document.createElement('li');
+    wireList.appendChild(liElement);
+  }
+});
+
 
 initCard()
 updateCardText()
