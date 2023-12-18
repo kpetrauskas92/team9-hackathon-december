@@ -148,6 +148,23 @@ Enter your text...
           <div class="choose-image pt-2">
             <i class="fa-solid fa-image"></i>
             <label for="imageSelect">Select Image:</label>
+
+            <input
+              type="radio"
+              name="imagesrc"
+              id="imagesrc1"
+              value="internal"
+              checked
+            />
+            <label for="imagesrc1">internal / </label>
+            <input
+              type="radio"
+              name="imagesrc"
+              id="imagesrc2"
+              value="external"
+            />
+            <label for="imagesrc2">external</label>
+
             <select name="imageopt" id="imageSelect" class="form-control">
               <option value="christmas-card-1843552_1280.jpg">
                 Christmas Card
@@ -203,6 +220,23 @@ Enter your text...
           <div class="choose-sound pt-4">
             <i class="fa-solid fa-music"></i>
             <label for="soundSelect">Select Audio:</label>
+
+            <input
+              type="radio"
+              name="soundsrc"
+              id="soundsrc2"
+              value="internal"
+              checked
+            />
+            <label for="soundsrc1">internal /</label>
+            <input
+              type="radio"
+              name="soundsrc"
+              id="soundsrc2"
+              value="external"
+            />
+            <label for="soundsrc2">external</label>
+
             <select name="sound" id="soundSelect" class="form-control">
               <!-- Add options here -->
 
@@ -264,43 +298,6 @@ Enter your text...
                 Your browser does not support the audio tag.
               </audio>
             </div>
-          </div>
-
-          <div class="options-configuration">
-            <input
-              type="radio"
-              name="imagesrc"
-              id="imagesrc1"
-              value="internal"
-              checked
-            />
-            <label for="imagesrc1">internal</label>
-            <input
-              type="radio"
-              name="imagesrc"
-              id="imagesrc2"
-              value="external"
-            />
-            <label for="imagesrc2">external</label>
-            [Image Source]
-          </div>
-          <div class="options-configuration">
-            <input
-              type="radio"
-              name="soundsrc"
-              id="soundsrc2"
-              value="internal"
-              checked
-            />
-            <label for="soundsrc1">internal</label>
-            <input
-              type="radio"
-              name="soundsrc"
-              id="soundsrc2"
-              value="external"
-            />
-            <label for="soundsrc2">external</label>
-            [Sound Source]
           </div>
         </div>
       </div>
