@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Envelope</title>
+    <link rel="stylesheet" href="../assets/envelope-style.css" />
+  </head>
+
+  <body>
+    <!-- Heading-->
+    <div class="text-center">
+      <div id="cardText" class="px-4">
+        <h1></h1>
+      </div>
+    </div>
+
+    <div onclick="nextCard()" class="wrapper one">
+      <div class="envelope"></div>
+      <div class="flap one"></div>
+      <div class="flap two"></div>
+      <div class="card one">
+        <img
+          id="card1"
+          src="../assets/images/options/moon-31665_1280.jpg"
+          alt="user selected image"
+          width="250"
+        />
+        <!-- JS add user selected image here-->
+      </div>
+      <div class="card two">
+        <img
+          id="card2"
+          src="../assets/images/options/moon-31665_1280.jpg"
+          alt="preview of card"
+          width="600"
+        />
+        <!-- main preview of card goes here-->
+      </div>
+    </div>
+
+    <script src="../../assets/scripts/player-script.js"></script>
+    <script>
+      if (paramsObj.sname && paramsObj.rname) {
+        document.getElementById('cardText').innerHTML =
+          '<h1>To: ' +
+          paramsObj.rname +
+          '<br>From: ' +
+          paramsObj.sname +
+          '</h1>'
+      }
+
+      document.getElementById('card1').src =
+        '../assets/images/options/' + paramsObj.imageopt
+    </script>
+  </body>
+</html>

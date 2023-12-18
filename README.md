@@ -298,6 +298,10 @@ Below is a full list of colors used and their usage:
 
 &#x2744; Also see the **[About us](https://kpetrauskas92.github.io/team9-hackathon-december/about-us.html)** page.
 
+&#x2744; Also see the **[About us](https://teman67.github.io/team9-hackathon-december/about-us.html)** page.
+
+
+
 <p align="center">
   **Click Here to go back to [Contents](#contents)**
 </P>
