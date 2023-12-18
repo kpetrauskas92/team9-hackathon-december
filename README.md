@@ -16,7 +16,7 @@
 # Credits
 
 <p align="center">
-  <strong><a href="https://teman67.github.io/team9-hackathon-december">Click Here</a></strong> to see the deployed website.
+  <strong><a href="https://kpetrauskas92.github.io/team9-hackathon-december.html">Click Here</a></strong> to see the deployed website.
 </p>
 
 
@@ -74,11 +74,60 @@
 
 ### [Color Pallette](color-pallette)
   
--  The specific color scheme used in this project was selected based on balancing two main criteria. On the one hand, to create a uniquely engaging, appealing, user-friendly interface while simultaneoulsy staying within widely recognized visual themes most associated with Christmas.
+  The specific color scheme used in this project was selected based on balancing two main criteria. On the one hand, to create a uniquely engaging, appealing, user-friendly interface while simultaneoulsy staying within widely recognized visual themes most associated with Christmas.
 
-   - Color 1
-   - Color 2
-   - Color 3
+The most important colors to the project's branding for consistency are below
+
+![Color palette](assets/images/images-README.md/README.md-color-palette.jpg)
+
+Below is a full list of colors used and their usage:
+
+- Body Background Color:
+
+  - Hex Code: #073607 (dark green)
+
+- Navigation Bar Background Color:
+
+  - Hex Code: #980505 (dark red)
+
+- Text Color:
+
+  - Hex Code: #ffffff (white)
+
+- Input Fields and Borders Color:
+
+  - Hex Code: #ccc (light gray)
+
+- Accent Color for Focus:
+
+  - Hex Code: #980505 (dark red)
+
+- Button Background Color:
+
+  - Hex Code: #5e0d0c (dark red)
+
+- Button Text Color:
+
+  - Hex Code: #FFF (white)
+
+- Button Hover Background Color:
+
+  - Hex Code: #a61715 (slightly lighter/darker red)
+
+- Snowflake Color:
+
+  - Linear Gradient: white to white (creating a light-colored circle)
+
+- Overlay Gradient Color:
+
+- Linear Gradient: 
+
+  - rgba(0, 0, 0, 0.911) to rgba(0, 0, 0, 0) (creating a dark overlay for image captions)
+
+- Social Icons Color:
+
+  - Hex Code: #980505 (dark red)
+
 
 ## Getting Started
 
@@ -115,7 +164,7 @@ Before you begin, make sure you have the following installed:
 - [Bootstrap](https://getbootstrap.com/): Used for styling and layout.
 - [JQuery](https://jquery.com/): Enhances the interactivity and dynamic features.
 - [Fontawesome](https://fontawesome.com/): Provides a collection of scalable vector icons.
-
+- [Coolers.com](https://coolers.co): Generates color pallettes.
 
 
 
@@ -137,7 +186,7 @@ Before you begin, make sure you have the following installed:
 
 &#x2744; [Taher](https://www.linkedin.com/in/taher-m/)
 
-&#x2744; Also see the **[About us](https://teman67.github.io/team9-hackathon-december/about-us.html)** page.
+&#x2744; Also see the **[About us](https://kpetrauskas92.github.io/team9-hackathon-december/about-us.html)** page.
 
 
 **Click Here to go back to [Contents](#contents)**
