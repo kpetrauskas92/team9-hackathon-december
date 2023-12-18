@@ -201,8 +201,29 @@ Below is a full list of colors used and their usage:
 
 - **[Deployment](#deployment)**
 
+  1. **Clone the Repository:**
+      ```bash
+      git clone https://github.com/kpetrauskas92/team9-hackathon-december.git
+      cd team9-hackathon-december
+      ```
 
+  2. **Commit and Push Changes:**
+      ```bash
+      git add .
+      git commit -m "Your commit message here"
+      git push origin master
+      ```
 
+  3. **Set Up GitHub Pages (for static websites):**
+     - Go to your repository settings on GitHub.
+     - Under the "GitHub Pages" section, choose the branch you want to deploy.
+
+  4. **Deploy on Other Platforms (for web applications):**
+     - Choose a platform like [Heroku](https://www.heroku.com/), [Vercel](https://vercel.com/), or [Netlify](https://www.netlify.com/).
+     - Follow platform-specific deployment instructions.
+
+  5. **License Your Project:**
+     - Choose an open-source license and include it in your repository.
 
 
 - **[Testing](#testing)**
