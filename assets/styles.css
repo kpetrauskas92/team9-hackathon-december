@@ -44,14 +44,23 @@ nav {
 .nav-link {
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
+}
+
+nav i{
+  font-size: 1.6rem;
 }
 
 .nav-logo {
   display: flex;
   justify-content: center;
   flex-grow: 1;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.3);
 }
 
 .logo {
@@ -131,6 +140,73 @@ input[type='radio'] {
   border-color: #980505;
   outline: none;
   background-color: #fff;
+}
+
+
+#wire{
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  padding: 0;
+  width: 100%;
+  top: -90px;
+  border-bottom: 3px solid #222;
+  height: 100px;
+}
+
+#wire li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 15px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0px 15px;
+  top: 102px;
+  display: inline-block;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count:infinite;
+  animation-name: even-flash;
+}
+
+#wire li:nth-child(odd){
+  animation-name: odd-flash;
+}
+
+#wire li:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  border-radius: 4px;
+  top: -5px;
+  left: 0px;
+  background: #444;
+}
+
+@keyframes even-flash {
+  0%, 100% {
+      background: rgb(6, 141, 6);
+      box-shadow: 0px 2px 20px 4px rgb(110, 233, 61);
+  }
+  50% {
+      background: rgba(255,230,65,0.5);
+      box-shadow: 0px 2px 20px 4px rgba(255,230,65,0.3);
+  }
+}
+
+@keyframes odd-flash {
+  50% {
+      background: rgb(27, 63, 224);
+      box-shadow: 0px 2px 20px 4px rgb(18, 190, 202);
+  }
+  0%,100% {
+      background: rgba(231, 40, 49, 0.5);
+      box-shadow: 0px 2px 20px 4px rgba(248, 56, 72, 0.3);
+  }
 }
 
 .snowflake {
@@ -344,6 +420,42 @@ input[type='radio'] {
   -moz-transition: 50ms linear;
   -o-transition: 50ms linear;
   transition: 50ms linear;
+}
+
+/* about us */
+
+.about-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  border: 5px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.avatar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: grayscale(0%);
+}
+
+.about-card-text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.about-card-text i {
+  color: #fff;
+}
+
+.about-card-text i:hover {
+  color: #073607;
 }
 
 footer {
