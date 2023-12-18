@@ -130,20 +130,48 @@ function updateTextPosition() {
   }
 }
 
-function copyLink(link) {
-  var copyText = document.getElementById('shareLink')
-  //copyText.value = link
+// function copyLink(link) {
+//   var copyText = document.getElementById('shareLink')
+//   //copyText.value = link
 
-  /* Select the text field */
-  copyText.select()
-  copyText.setSelectionRange(0, 99999) /* For mobile devices */
+//   /* Select the text field */
+//   copyText.select()
+//   copyText.setSelectionRange(0, 99999) /* For mobile devices */
 
-  /* Copy the text inside the text field */
-  document.execCommand('copy')
+//   /* Copy the text inside the text field */
+//   document.execCommand('copy')
 
-  /* Alert the copied text */
-  alert('Copied the link to share!!!')
+//   /* Alert the copied text */
+//   alert('Copied the link to share!!!')
+// }
+
+function copyLink() {
+  var copyText = document.getElementById('shareLink').value;
+  var socialLinks = document.querySelectorAll('.social-links a');
+
+  // Update href attribute for each social media link
+  socialLinks.forEach(function (link) {
+    var socialMedia = link.getAttribute('aria-label').replace('Share on ', '').toLowerCase();
+    var shareUrl = generateShareUrl(copyText, socialMedia);
+    link.href = shareUrl;
+  });
+
+  // Select and copy the text field
+  document.getElementById('shareLink').select();
+  document.getElementById('shareLink').setSelectionRange(0, 99999);
+  document.execCommand('copy');
+
+  // Alert the copied text
+  alert('Copied the link to share!');
 }
+
+// Function to generate shareable URL based on social media platform
+function generateShareUrl(url, socialMedia) {
+  // Add logic to generate the shareable URL for each social media platform
+  // For simplicity, I'm assuming each social media platform supports appending the URL
+  return url + '&platform=' + socialMedia;
+}
+
 
 function preview() {
   var copyText = document.getElementById('shareLink')
