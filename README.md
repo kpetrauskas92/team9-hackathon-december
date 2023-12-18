@@ -3,40 +3,27 @@
 ![nodes4lifeyo](assets/images/images-README.md/nodemas.png)
 
 
-<p align="center">
-  Code Instittute Hackathon, December 2023.
-  Team number 9 - The North Pole Nodes
-
-![Team Logo](assets/images/images-README.md/team-nodes.jpg)
-
-</p>
-
 ## Description
 
-<p align="center">
-  The Merry Hackmas Card Creator is a project that allows users to generate personalized Christmas cards with customizable features, including the recipients name and choosing a variety of images and audio.
-</P>
+Created by [The North Pole Nodes](https://kpetrauskas92.github.io/team9-hackathon-december/about-us.html) as part of [Code Institute's December 2023 Hackathon](https://hackathon.codeinstitute.net/hackathon/40/), **The Merry Hackmas Card Creator** allows Users to generate personalized Christmas cards with customizable features, including the recipients name and choosing a variety of images and audio. 
 
-<p align="center">
-  <img src="assets/images/images-README.md/santa-envelope.jpg" alt="Santa with Gifts">
-</p>
+<div style="display: flex; justify-content: center;">
+  <img src="assets/images/images-README.md/README.md-nodes-santa-welcome.jpg" alt="Welcome image" style="width: 300px; height: auto;">
+</div>
 
-
-<p align="center">
-  <strong><a href="https://kpetrauskas92.github.io/team9-hackathon-december.html">Click Here</a></strong> to see the deployed website.
-</p>
-
+<strong><a href="https://kpetrauskas92.github.io/team9-hackathon-december.html">Click Here</a></strong> to see the deployed website.
 
 ## [Contents](#contents)
 
 - **[Features](#features)**
+- **[Getting Started](#getting-started)**
 - **[Agile Development and User Stories](#agile-development-and-user-stories)**
 - **[UX and UI Design](#uxui-design)**
   - [UX](#ux)
   - [UI](#ui)
   - [Typography](typography)
-  - [Color Pallette](color-pallette)
-- **[Getting Started](#getting-started)**
+  - [Color Palette](color-palette)
+
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - **[Usage](#usage)**
@@ -46,13 +33,43 @@
 - **[Technologies Used](#technologies-used)**
 - **[Acknowledgements](#acknowledgements)**
 - **[Credits](#credits)**
-- **[License](#license)**
 
 ## [Features](#features)
 
 - **Name Customization:** Users can personalize their Christmas card by adding the recipient's name.
 - **Image Selection:** Choose from a variety of festive images to accompany the card.
 - **Audio Options:** Add holiday tunes or personalized messages with audio customization.
+
+
+## [Getting Started](#getting-started)
+
+### Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/): The project is built using Node.js.
+- [npm](https://www.npmjs.com/): The Node.js package manager, used to install project dependencies.
+- [Web browser](https://www.google.com/chrome/): A modern web browser to view and interact with the Christmas card.
+
+### Installation
+
+1. **Clone the repository to your local machine:**
+
+    ```bash
+    git clone https://github.com/your-username/team9-hackathon-december.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd team9-hackathon-december
+    ```
+
+3. **Install project dependencies using npm:**
+
+    ```bash
+    npm install
+    ```
 
 ### [Agile Development and User Stories](#agile-development-and-user-stories)
 
@@ -65,7 +82,7 @@
 
   - [UX](#ux)
 
-    - Wireframe Mock-ups
+    - Wireframe Mock-ups used in developing the concept includeded the following examples:
 
       - ![wireframe-draft1.1](assets/images/images-README.md/wireframe-draft1.png)
       - ![wireframe-draft1.2](assets/images/images-README.md/wireframe-draft2.png)
@@ -74,7 +91,7 @@
 
 
   - [UI](#ui)
-    - ![Image1]()
+    - ![Landing page UI](assets/images/images-README.md/README.md-ui.jpg)
 
      1. **Navigation Bar:**
         - Located at the top of the page, the navigation bar includes links to different sections of the application, such as the home page and the about us page.
@@ -89,30 +106,30 @@
         - **Button to Trigger Collapse:** Allows users to expand or collapse the customization options.
         - **Customization Options:** Sections for adding text, choosing images, embedding YouTube videos, and selecting background music.
 
-### 4. **Text and Image Customization:**
-   - **Text Section:** Allows users to input personalized text for their Christmas card.
-   - **Choose Image Section:** A dropdown menu to select predefined images or an input box for an external image URL.
+    4. **Text and Image Customization:**
+     - **Text Section:** Allows users to input personalized text for their Christmas card.
+     - **Choose Image Section:** A dropdown menu to select predefined images or an input box for an external image URL.
 
-### 5. **Media Embedding:**
-   - **YouTube Video URL:** Users can input a YouTube video URL to embed a video in the Christmas card.
-   - **Audio Selection:** Dropdown menu to choose background music for the card. Option to provide an external audio URL.
+    5. **Media Embedding:**
+     - **YouTube Video URL:** Users can input a YouTube video URL to embed a video in the Christmas card.
+     - **Audio Selection:** Dropdown menu to choose background music for the card. Option to provide an external audio URL.
 
-### 6. **Audio Preview:**
-   - An audio player with controls to preview the selected background music before finalizing the card.
+    6. **Audio Preview:**
+     - An audio player with controls to preview the selected background music before finalizing the card.
 
-### 7. **Share Card Section:**
-   - **Sender and Receiver Names:** Input fields for the sender's and receiver's names.
-   - **Social Media Icons:** Buttons to share the card on popular social media platforms.
-   - **Copy Link Button:** Allows users to copy a shareable URL for their personalized Christmas card.
+    7. **Share Card Section:**
+     - **Sender and Receiver Names:** Input fields for the sender's and receiver's names.
+     - **Social Media Icons:** Buttons to share the card on popular social media platforms.
+     - **Copy Link Button:** Allows users to copy a shareable URL for their personalized Christmas card.
 
-### 8. **Footer:**
-   - Displays essential information such as copyright details and a link to the About Us page.
+    8. **Footer:**
+     - Displays essential information such as copyright details and a link to the About Us page.
 
-### 9. **About Us Link:**
-   - Clickable link in the footer that directs users to the "About Us" section, providing details about the team behind the Christmas card application.
+    9. **About Us Link:**
+     - Clickable link in the footer that directs users to the "About Us" section, providing details about the team behind the Christmas card application.
 
-### 10. **Copy Link Script:**
-   - JavaScript function for copying the shareable link to the clipboard.
+    10. **Copy Link Script:**
+     - JavaScript function for copying the shareable link to the clipboard.
 
 
 ### [Typography](typography)
@@ -121,7 +138,7 @@
   ![Font example](assets/images/images-README.md/README.md-font-example.jpg)
 
 
-### [Color Pallette](color-pallette)
+### [Color Palette](color-palette)
   
   The specific color scheme used in this project was selected based on balancing two main criteria. On the one hand, to create a uniquely engaging, appealing, user-friendly interface while simultaneoulsy staying within widely recognized visual themes most associated with Christmas.
 
@@ -178,50 +195,66 @@ Below is a full list of colors used and their usage:
   - Hex Code: #980505 (dark red)
 
 
-## Getting Started
 
-### Prerequisites
+- **[Deployment](#deployment)**
 
-Before you begin, make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/): The project is built using Node.js.
-- [npm](https://www.npmjs.com/): The Node.js package manager, used to install project dependencies.
-- [Web browser](https://www.google.com/chrome/): A modern web browser to view and interact with the Christmas card.
 
-### Installation
 
-1. **Clone the repository to your local machine:**
 
-    ```bash
-    git clone https://github.com/your-username/team9-hackathon-december.git
-    ```
+- **[Testing](#testing)**
 
-2. **Navigate to the project directory:**
+   - Performance
+     - Mobile
+     ![Mobile](assets/images/images-README.md/README.md-mobile-performance.jpg)
+    
+     - Desktop
+     ![Desktop](assets/images/images-README.md/README.md-desktop-performance.jpg)
 
-    ```bash
-    cd team9-hackathon-december
-    ```
+  - Accesibility 
+    ![Accessibility results](assets/images/images-README.md/README.md-accessibility-results.jpg)
 
-3. **Install project dependencies using npm:**
 
-    ```bash
-    npm install
-    ```
 
-## Technologies Used
+ - HTML
+   - Mobile
+     - X
+   - Desktop
+      -Y
+ - CSS
+    - Mobile
+     - X
+   - Desktop
+      -Y
 
-- [Bootstrap](https://getbootstrap.com/): Used for styling and layout.
-- [JQuery](https://jquery.com/): Enhances the interactivity and dynamic features.
-- [Fontawesome](https://fontawesome.com/): Provides a collection of scalable vector icons.
-- [Coolers.com](https://coolers.co): Generates color pallettes.
+ - JavaScript
+    - Mobile
+     - X
+   - Desktop
+      -Y
 
+ ### Bugs
+   - Whitespace was found regarding specific icons on the about-us.html page
+    ![Whitespace bug](assets/images/images-README.md/README.md-bug-1.jpg)
+
+    - Y
+    - Z
+
+
+## [Technologies Used](#technologies-used)
+
+- [Bootstrap](https://getbootstrap.com/). Used for styling and layout.
+- [JQuery](https://jquery.com/). Enhances the interactivity and dynamic features.
+- [Fontawesome](https://fontawesome.com/). Provides a collection of scalable vector icons.
+- [Coolers.com](https://coolers.co). Generates color pallettes.
+- [Snow.js](https://www.cssscript.com/configurable-snow-falling-effects-javascript-snow-js/). Configures snow falling effects in JavaScript
 
 ## [Acknowledgements](#acknowledgements)
 
-- [Snow.js]().
 - [CSS Christmas Lights]().
-- Team logo uses a design from [Node.js]().
+- Team logo design found at [redbubble](https://www.redbubble.com/i/kids-t-shirt/Node-JS-JavaScript-Ugly-Sweater-Christmas-by-vladocar/28588671.VXRIW).
 - [pixabay](https://pixabay.com/).
+- [PageSpeed Insights](https://pagespeed.web.dev/) was used to test the site's performance.
 
 
 
@@ -243,9 +276,6 @@ Before you begin, make sure you have the following installed:
 &#x2744; [Taher](https://www.linkedin.com/in/taher-m/)
 
 &#x2744; Also see the **[About us](https://kpetrauskas92.github.io/team9-hackathon-december/about-us.html)** page.
-
-## [License](#license)
-  This project is licensed under the [MIT License](https://chat.openai.com/c/LICENSE).
 
 <p align="center">
   **Click Here to go back to [Contents](#contents)**
