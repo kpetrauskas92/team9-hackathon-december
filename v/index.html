@@ -41,7 +41,35 @@
 
     <script src="../../assets/scripts/player-script.js"></script>
     <script>
-      processParameters()
+      var paramsObj = {}
+      function processParameters1() {
+        // Get the current URL
+        var url = window.location.href
+
+        // Find the question mark (?) in the URL
+        var index = url.indexOf('?')
+        if (index !== -1) {
+          // Get the query string after the question mark
+          var queryString = url.slice(index + 1)
+
+          // Split the query string into key-value pairs
+          var params = queryString.split('&')
+
+          // Object to store the parameters
+          // var paramsObj = {}
+
+          // Iterate over the key-value pairs and store them in the object
+          params.forEach(function (param) {
+            var pair = param.split('=')
+            var key = decodeURIComponent(pair[0])
+            var value = decodeURIComponent(pair[1] || '')
+            paramsObj[key] = value
+          })
+
+          // showParameters(paramsObj)
+        }
+      }
+      processParameters1()
       if (paramsObj.sname && paramsObj.rname) {
         document.getElementById('cardText').innerHTML =
           '<h1>To: ' +
