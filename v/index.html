@@ -39,8 +39,8 @@
       </div>
     </div>
 
-    <script src="../../assets/scripts/player-script.js"></script>
     <script>
+      const PLAYURL = 'card.html'
       var paramsObj = {}
       function processParameters1() {
         // Get the current URL
@@ -69,6 +69,13 @@
           // showParameters(paramsObj)
         }
       }
+
+      function nextCard() {
+        setInterval(function () {
+          window.location.href = PLAYURL + window.location.search
+        }, 2000)
+      }
+
       processParameters1()
       if (paramsObj.sname && paramsObj.rname) {
         document.getElementById('cardText').innerHTML =
