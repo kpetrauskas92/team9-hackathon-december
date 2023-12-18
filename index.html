@@ -42,15 +42,16 @@
 
     <!-- Nav section -->
     <nav class="nav-container py-2 px-5">
-      
       <a href="index.html" class="nav-link text-uppercase">
-        <i class="fa-solid fa-gift me-1"></i>Home</a>
+        <i class="fa-solid fa-gift me-1"></i>Home</a
+      >
 
       <a href="index.html" class="nav-logo">
         <img src="assets/images/logo/logo.png" alt="Logo" class="logo" />
       </a>
       <a href="about-us.html" class="nav-link text-uppercase">
-        <i class="fa-solid fa-sleigh me-1"></i>About</a>
+        <i class="fa-solid fa-sleigh me-1"></i>About</a
+      >
     </nav>
     <ul id="wire">
       <li></li>
@@ -89,7 +90,7 @@
       <li></li>
       <li></li>
       <li></li>
-  </ul>
+    </ul>
 
     <!-- Heading-->
     <div class="text-center">
@@ -102,7 +103,6 @@
 
     <!-- Main Content Section -->
     <div class="container main-container pt-2">
-
       <!-- Image Container-->
       <div class="container mb-2">
         <div class="image-container bg-white">
@@ -195,7 +195,7 @@ Enter your text...
               id="videoUrl"
               class="form-control"
               rows="2"
-              placeholder="http://www.youtube.com/embed/video_id"
+              placeholder="https://www.youtube.com/watch?v=video_id"
             />
           </div>
 
@@ -266,19 +266,17 @@ Enter your text...
             </div>
           </div>
 
-          
-					<div class="row mt-3">
-						<div class="col col-md-12">
-							<label for="debugURL">Debug URL:</label>
-							<textarea
-								class="form-control"
-								id="debugURL"
-								rows="2"
-								readonly
-							></textarea>
-						</div>
-					</div>
-					
+          <div class="row mt-3">
+            <div class="col col-md-12">
+              <label for="debugURL">Debug URL:</label>
+              <textarea
+                class="form-control"
+                id="debugURL"
+                rows="2"
+                readonly
+              ></textarea>
+            </div>
+          </div>
 
           <div class="options-configuration">
             <input
@@ -410,7 +408,17 @@ Enter your text...
                 class="btn btn-outline-light btn-floating m-1"
                 role="button"
                 href="#"
-                onclick="copyLink('https://team9hackathon.com/interactive-card')"
+                onclick="preview()"
+                aria-label="Preview Card"
+              >
+                <i class="fa-solid fa-display"></i>
+              </a>
+
+              <a
+                class="btn btn-outline-light btn-floating m-1"
+                role="button"
+                href="#"
+                onclick="copyLink('')"
                 aria-label="Copy Link to Share"
               >
                 <i class="fa-solid fa-link"> </i>
@@ -438,24 +446,6 @@ Enter your text...
         >
       </div>
     </footer>
-
-    <!-- script for footer section (copy link)-->
-    <script>
-      function copyLink(link) {
-        var copyText = document.getElementById('shareLink')
-        copyText.value = link
-
-        /* Select the text field */
-        copyText.select()
-        copyText.setSelectionRange(0, 99999) /* For mobile devices */
-
-        /* Copy the text inside the text field */
-        document.execCommand('copy')
-
-        /* Alert the copied text */
-        alert('Copied the link to share: ' + copyText.value)
-      }
-    </script>
 
     <!-- Bootstrap JS (optional) -->
     <script
