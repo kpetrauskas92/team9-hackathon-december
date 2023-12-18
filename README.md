@@ -110,29 +110,29 @@ Before you begin, make sure you have the following installed:
         - **Customization Options:** Sections for adding text, choosing images, embedding YouTube videos, and selecting background music.
 
     4. **Text and Image Customization:**
-     - **Text Section:** Allows users to input personalized text for their Christmas card.
-     - **Choose Image Section:** A dropdown menu to select predefined images or an input box for an external image URL.
+       - **Text Section:** Allows users to input personalized text for their Christmas card.
+       - **Choose Image Section:** A dropdown menu to select predefined images or an input box for an external image URL.
 
     5. **Media Embedding:**
-     - **YouTube Video URL:** Users can input a YouTube video URL to embed a video in the Christmas card.
-     - **Audio Selection:** Dropdown menu to choose background music for the card. Option to provide an external audio URL.
+        - **YouTube Video URL:** Users can input a YouTube video URL to embed a video in the Christmas card.
+        - **Audio Selection:** Dropdown menu to choose background music for the card. Option to provide an external audio URL.
 
     6. **Audio Preview:**
-     - An audio player with controls to preview the selected background music before finalizing the card.
+       - An audio player with controls to preview the selected background music before finalizing the card.
 
     7. **Share Card Section:**
-     - **Sender and Receiver Names:** Input fields for the sender's and receiver's names.
-     - **Social Media Icons:** Buttons to share the card on popular social media platforms.
-     - **Copy Link Button:** Allows users to copy a shareable URL for their personalized Christmas card.
+       - **Sender and Receiver Names:** Input fields for the sender's and receiver's names.
+       - **Social Media Icons:** Buttons to share the card on popular social media platforms.
+       - **Copy Link Button:** Allows users to copy a shareable URL for their personalized Christmas card.
 
     8. **Footer:**
-     - Displays essential information such as copyright details and a link to the About Us page.
+       - Displays essential information such as copyright details and a link to the About Us page.
 
     9. **About Us Link:**
-     - Clickable link in the footer that directs users to the "About Us" section, providing details about the team behind the Christmas card application.
+       - Clickable link in the footer that directs users to the "About Us" section, providing details about the team behind the Christmas card application.
 
     10. **Copy Link Script:**
-     - JavaScript function for copying the shareable link to the clipboard.
+        - JavaScript function for copying the shareable link to the clipboard.
 
 
 ### [Typography](typography)
