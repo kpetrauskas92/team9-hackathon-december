@@ -241,15 +241,11 @@ Below is a full list of colors used and their usage:
 
 
  - HTML
-   - Mobile
-     - X
-   - Desktop
-      -Y
+
+  ![html validation](assets/images/images-README.md/README.md-html.jpg)
+
  - CSS
-    - Mobile
-     - X
-   - Desktop
-      -Y
+  ![css validation](assets/images/images-README.md/README.md-css.jpg)
 
  - JavaScript
     - Mobile
