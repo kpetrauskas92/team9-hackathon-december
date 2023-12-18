@@ -36,6 +36,9 @@ Created by [The North Pole Nodes](https://kpetrauskas92.github.io/team9-hackatho
 
 ## [Features](#features)
 
+![Brief overview of features](assets/images/images-README.md/README.md-features-1.jpg)
+
+The main features include:
 - **Name Customization:** Users can personalize their Christmas card by adding the recipient's name.
 - **Image Selection:** Choose from a variety of festive images to accompany the card.
 - **Audio Options:** Add holiday tunes or personalized messages with audio customization.
