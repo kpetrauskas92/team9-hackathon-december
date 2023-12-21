@@ -136,7 +136,7 @@ Before you begin, make sure you have the following installed:
 
 
 ### [Typography](typography)
-- The main font used in this project is 'Cinzel Decorative. This font was chosen becuase of it's instantly reconizable Christmas theme and the familiar feeling associated with Christmas it evokes.
+- The main font used in this project is 'Cinzel Decorative'. This font was chosen becuase of it's instantly reconizable Christmas theme and the familiar feeling associated with Christmas it evokes.
 
   ![Font example](assets/images/images-README.md/README.md-font-example.jpg)
 
