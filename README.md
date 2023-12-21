@@ -102,41 +102,48 @@ Before you begin, make sure you have the following installed:
     2. **Customization Button:**
         - A prominent "Customize This Card" button triggers the customization section, allowing users to personalize their Christmas card.
 
-    3. **Main Content Section:**
+    3. **Gallery of Cards**
+        - User can choose from a wide variety of background images from this gallery.
+
+        ![gallery of background images](assets/images/images-README.md/README.md-ui-gallery.jpg)  
+
+    4. **Main Content Section:**
         - Divided into several key components:
         - **Heading:** Presents the main purpose of the application with a welcoming message.
         - **Image Container:** Displays the selected or default image for the Christmas card.
         - **Button to Trigger Collapse:** Allows users to expand or collapse the customization options.
+
         - **Customization Options:** Sections for adding text, choosing images, embedding YouTube videos, and selecting background music.
 
-    4. **Text and Image Customization:**
+    5. **Text and Image Customization:**
        - **Text Section:** Allows users to input personalized text for their Christmas card.
        - **Choose Image Section:** A dropdown menu to select predefined images or an input box for an external image URL.
 
-    5. **Media Embedding:**
+    6. **Media Embedding:**
         - **YouTube Video URL:** Users can input a YouTube video URL to embed a video in the Christmas card.
         - **Audio Selection:** Dropdown menu to choose background music for the card. Option to provide an external audio URL.
 
-    6. **Audio Preview:**
+    7. **Audio Preview:**
        - An audio player with controls to preview the selected background music before finalizing the card.
 
-    7. **Share Card Section:**
+    8. **Share Card Section:**
        - **Sender and Receiver Names:** Input fields for the sender's and receiver's names.
        - **Social Media Icons:** Buttons to share the card on popular social media platforms.
+     
        - **Copy Link Button:** Allows users to copy a shareable URL for their personalized Christmas card.
 
-    8. **Footer:**
+    9. **Footer:**
        - Displays essential information such as copyright details and a link to the About Us page.
 
-    9. **About Us Link:**
+    10. **About Us Link:**
        - Clickable link in the footer that directs users to the "About Us" section, providing details about the team behind the Christmas card application.
 
-    10. **Copy Link Script:**
+    11. **Copy Link Script:**
         - JavaScript function for copying the shareable link to the clipboard.
 
 
 ### [Typography](typography)
-- The main font used in this project is 'Cinzel Decorative. This font was chosen becuase of it's instantly reconizable Christmas theme and the familiar feeling associated with Christmas it evokes.
+- The main font used in this project is 'Cinzel Decorative'. This font was chosen becuase of it's instantly reconizable Christmas theme and the familiar feeling associated with Christmas it evokes.
 
   ![Font example](assets/images/images-README.md/README.md-font-example.jpg)
 
