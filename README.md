@@ -11,7 +11,7 @@ Created by [The North Pole Nodes](https://kpetrauskas92.github.io/team9-hackatho
   <img src="assets/images/images-README.md/README.md-nodes-santa-welcome.jpg" alt="Welcome image" style="width: 300px; height: auto;">
 </div>
 
-<strong><a href="https://kpetrauskas92.github.io/team9-hackathon-december.html">Click Here</a></strong> to see the deployed website.
+<strong><a href="https://kpetrauskas92.github.io/team9-hackathon-december">Click Here</a></strong> to see the deployed website.
 
 ## [Contents](#contents)
 
@@ -78,7 +78,7 @@ Before you begin, make sure you have the following installed:
 
 - [GitHubProjects](https://github.com/users/kpetrauskas92/projects/8)
 
-  - ![Image1]()
+  - ![Project kanban board](assets/images/images-README.md/README.md-gitHub-projects.jpg)
 
 
 ### [UX and UI Design](#uxui-design)
@@ -263,9 +263,7 @@ Below is a full list of colors used and their usage:
  ### Bugs
    - Whitespace was found regarding specific icons on the about-us.html page
     ![Whitespace bug](assets/images/images-README.md/README.md-bug-1.jpg)
-
-    - Y
-    - Z
+   - Forking and creating branches regarding the main repository led to Git pulling, pushing and merging played a significant role in progressing certain features and deployment. 
 
 
 ## [Technologies Used](#technologies-used)
